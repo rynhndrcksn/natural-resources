@@ -65,4 +65,14 @@ $(document).ready(function () {
     $(".submit").click(function () {
         return false;
     })
+
+
+
+
+    // //Add mouseover/mouseleave event listeners to nav items
+    // $('.nav-item').mouseover( function(e){
+    //     $(this).addClass('nav-item-selected');
+    // }).mouseleave(function(){
+    //     $(this).removeClass('nav-item-selected')
+    // });
 });

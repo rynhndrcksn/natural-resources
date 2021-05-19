@@ -12,20 +12,43 @@
 
     <title>NATRS Application Portal</title>
     <!--Favicon-->
-
 </head>
-
 <body>
-<div class="content container-fluid">
-    <h1>Application</h1>
-    <h3>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and APP for
-        Natural Resources</h3>
 
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-sm-9 col-md-7
-				col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+    <!--  Page Content  -->
+    <div class="container-fluid h-100">
+
+        <!--  Row  -->
+        <div class="row h-100 justify-content-center">
+
+            <!--  Navbar Col  -->
+            <div id="navbar" class="col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center p-0">
+
+                <!--  Nav Items  -->
+                <ul class="list-unstyled pt-5">
+                    <a href="#" class="text-decoration-none text-light" >
+                        <li class="nav-item">Step 1</li></a>
+                    <a href="#" class="text-decoration-none text-light" >
+                        <li class="nav-item">Step 2</li></a>
+                    <a href="#" class="text-decoration-none text-light" >
+                        <li class="nav-item">Step 3</li></a>
+                    <a href="#" class="text-decoration-none text-light" >
+                        <li class="nav-item">Step 4</li></a>
+                    <a href="#" class="text-decoration-none text-light" >
+                        <li class="nav-item">Step 5</li></a>
+                    <a href="home.html" class="text-decoration-none text-light" >
+                        <li class="nav-item logout-button">Logout</li></a>
+                </ul>
+            </div>
+
+            <!--  Form Col  -->
+            <div class="col-sm-9 col-md-9 col-lg-9 col-xl-10 text-center mt-3 mb-2">
+
                 <div class="px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h1>Application</h1>
+                    <h3>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and APP for
+                        Natural Resources</h3>
+
                     <form id="form">
                         <ul id="progressbar">
                             <li class="active" id="step1">
@@ -35,7 +58,7 @@
                             <li id="step3"><strong>Step 3</strong></li>
                             <li id="step4"><strong>Step 4</strong></li>
                             <li id="step5"><strong>Step 5</strong></li>
-                            <li id="review"><strong>Review and Submit</strong></li>
+                            <li id="step6"><strong>Review and Submit</strong></li>
                         </ul>
                         <br>
                         <fieldset>
@@ -75,10 +98,12 @@
                                    class="previous-step"
                                    value="Previous Step"/>
                         </fieldset>
+
+
                         <fieldset>
                             <div class="finish">
-                                <h2 class="text text-center">
-                                    <strong>Review and Submit!</strong>
+                                <h2 class="next-step text text-center">
+                                    <strong>TEST</strong>
                                 </h2>
                             </div>
                             <input type="button" name="previous-step"
@@ -90,7 +115,6 @@
             </div>
         </div>
     </div>
-</div>
 </body>
 
 <!-- JavaScript -->
