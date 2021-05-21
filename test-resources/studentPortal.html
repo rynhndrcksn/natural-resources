@@ -31,7 +31,8 @@
             </a>
 
             <!--  Navbar Hamburger Menu  -->
-            <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarToggler"
                     aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,11 +42,21 @@
                 <ul class="list-unstyled pt-5">
 
                     <!--  Nav Items  -->
-                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 1</li></a>
-                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 2</li></a>
-                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 3</li></a>
-                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 4</li></a>
-                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 5</li></a>
+                    <a href="#" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 1</li>
+                    </a>
+                    <a href="#" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 2</li>
+                    </a>
+                    <a href="#" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 3</li>
+                    </a>
+                    <a href="#" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 4</li>
+                    </a>
+                    <a href="#" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 5</li>
+                    </a>
 
                     <!--  Logout  -->
                     <a href="home.html" class="text-decoration-none text-light">
@@ -56,7 +67,7 @@
         </nav>
 
         <!--  Form Col  -->
-        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-10 mt-3 mb-5">
+        <div class="col-sm-12 col-md-9 col-lg-9 col-xl-10 p-0">
             <header class="mb-4">
                 <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
                     <h1>APPLICATION</h1>
@@ -69,7 +80,7 @@
             </header>
 
             <!--  Form  -->
-            <form id="form">
+            <form id="form" class="mb-5">
 
                 <!--  Progress Bar  -->
                 <ul id="progressbar">
@@ -89,6 +100,17 @@
                     <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
                         <h2 class="fs-title pl-1 pr-1">Read Introductory Information</h2>
                         <h5 class="fs-subtitle">Step 1</h5>
+                    </div>
+                    <div class="form-body pl-5 pr-5 pt-1 pb-2">
+                        <h3>About Our Program</h3>
+                        <h4>Green River Natural Resources degree options will prepare you for immediate employment in
+                            forestry, water quality, wildfire, and park management as applied to natural resources. You
+                            may also further your education at universities with natural resources programs.</h4>
+                        <h5>Natural Resources technicians work outdoors on private, state and federal forestlands. They
+                            gather information, direct and inspect the work of others and explain land management
+                            activities to the public. They assist professional foresters, biologists and recreation
+                            managers. They utilize current technologies including Global Positioning Systems (GPS),
+                            laser measuring instruments, and current software in various applications.</h5>
                     </div>
                     <input type="button" name="next-step"
                            class="next-step rounded" value="Next Step"/>
@@ -113,12 +135,13 @@
                         <h2 class="fs-title pl-1 pr-1">Personal Statement</h2>
                         <h5 class="fs-subtitle">Step 3</h5>
                     </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2">
+                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
                         <h5>Outline why joining our program will help you reach your educational/career goals. This
                             statement does not have to be lengthy (we suggest 1-2 pages). Without the letter of
                             interest/personal statement submitted, your application file will be deemed incomplete
                             and
                             not reviewed once the committee meets to assess applications.</h5>
+                        <br>
                         <h5>Requirements:</h5>
                         <ul>
                             <li>Upload a word doc</li>
@@ -174,7 +197,97 @@
                            value="Previous Step"/>
                 </fieldset>
             </form>
+
+            <!-- Collapsible Footer -->
+            <footer class="footer green-color text-white text-decoration-none">
+                <div class="footer-container row row-cols-1 row-cols-md-2 justify-content-center text-center mx-auto pt-3">
+                    <div id="firstCol" class="col">
+                        <a class="taber text-uppercase" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Helpful Employee Resources &nbsp;
+                        </a>
+                        <div id="collapseOne" class="panel-collapse collapse in pt-2" role="tabpanel">
+                            <hr class="background-white">
+                            <ul>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/">Green River
+                                        College</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/va//">Virtual
+                                        Assistance</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://whentowork.com/">When To Work</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.gatornet.greenriver.edu/tlr/">Time
+                                        Leave
+                                        Reporting (TLR)</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="http://grccitstudenthelpdesk.pbworks.com/w/session/login?
+                            return_to=http%3A%2F%2Fgrccitstudenthelpdesk.pbworks.com%2Fw%2Fpage%2F34031847%2FFrontPag
+                            e">WIKI</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/grc/staff/">Campus
+                                        Directory</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <a class="taber text-uppercase" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapsetwo" aria-expanded="false" aria-controls="collapseOne">
+                            Helpful Student Resources &nbsp;&nbsp;&nbsp;
+                        </a>
+                        <div id="collapsetwo" class="panel-collapse collapse in pt-2" role="tabpanel">
+                            <hr class="background-white">
+                            <ul>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/">Green River
+                                        College</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://login.microsoftonline.com/49d1e695-839f-40ae-a8b3-
+                        0a2de9d671b5/oauth2/authorize?client_id=8383e4ac-4bcd-493b-b37e-66f76f292346&redirect_uri=https
+                        %3A%2F%2Fmy.greenriver.edu%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response
+                        _mode=form_post&nonce=637508004443671642.MzVhNWMzMjQtNDdjNC00YjU5LTljMmMtM2NmNDIxNzcyM2U5ZjJmNz
+                        Y2NjYtYzU2OC00ZDY3LThmYTctNmQzODBlM2RiYzZi&state=CfDJ8ABaWuxjIk9NvJ80TUWqy1GZdLw7VGbq_m5JtUfM2T
+                        QvALRB8BXqVvPdhtwfJWb47OQiHkXhp1Nf5iJSNgVo2ThD2ykGnaY6X_Oa6dFCJRcQaD-oZZr4490u0NgMruHJNtMBUEg2N
+                        HMBdpRo8dec0ODAEjoc8vQsm6HeZ4HZuNd9nt_DXpfEz3Ty-fcBH3zKXpVCfUDfavL66-YZE904pKwtVb4vcdTsHrQzhfIH
+                        C7Sy7W2dfRKEgl9XcWNWRJeObObtWP0ZmhGkr8dX1LgSkerxL1D7zYw0pNChO4JymN3Q&x-client-SKU=ID_NETSTANDAR
+                        D2_0&x-client-ver=5.6.0.0&sso_reload=true">My Green River</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://egator.greenriver.edu/">Canvas</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed"
+                                       href="https://www.greenriver.edu/students/academics/dates/">
+                                        Academic Calendar</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/students/academics/enrollment-
+                        services/degree-audit/">Degree Audit</a>
+                                </li>
+                                <li>
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/students/online-services/student-
+                        virtual-desktop/">Student Virtual Desktop</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--  Bottom -->
+                <div class="text-center copyright-text">
+                    <p>© Created by AR2D2</p>
+                </div>
+            </footer>
         </div>
+
     </div>
 </div>
 </body>
@@ -192,6 +305,6 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 <script src="../public/assets/scripts/application.js"></script>
-<script src="../public/assets/scripts/navbar.js"></script>
+<script src="../public/assets/scripts/navbar_and_footer.js"></script>
 
 </html>

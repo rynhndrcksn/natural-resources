@@ -81,7 +81,7 @@ ul.list-unstyled {
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding-bottom: 20px;
 }
@@ -255,4 +255,83 @@ header {
     #header {
         background-color: #287b3d;
     }
+}
+
+
+/***** Footer Styles ******/
+footer {
+    margin-top: 0;
+    background-color: #2F8D46;
+}
+
+hr.background-white {
+    background-color: white;
+}
+
+a.hyperlink-removed {
+    text-decoration: none;
+    color: white;
+}
+
+/***** Collapsible Footer Styles *****/
+
+@media (min-width: 1400px) {
+    footer {
+        padding-left: 12em;
+        padding-right: 12em;
+    }
+}
+
+footer ul {
+    padding: 0 0 0;
+}
+
+footer ul li, .taber {
+    list-style: none;
+}
+
+ul > li > a:hover, a:hover {
+    color: #d3d9dd;
+}
+
+.copyright-text {
+    color: #d3d9dd;
+    font-size: 13px;
+}
+
+footer a.taber {
+    font-size: 20px;
+    color: white;
+    text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+    .copyright-text {
+        padding-top: 25px;
+    }
+
+    .taber {
+        cursor: auto;
+    }
+
+    div#firstCol {
+        padding-bottom: 25px;
+    }
+
+    .taber.collapsed:after {
+        content: "+";
+    }
+    .taber:after {
+        content: "-";
+    }
+
+    .green-color {
+        background-color: #2F8D46;
+    }
+}
+
+
+p {
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }
