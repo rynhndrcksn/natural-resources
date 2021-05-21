@@ -24,151 +24,156 @@
 
         <!--  Navbar Col  -->
         <nav class="navbar-expand-md navbar-dark navbar-expand-lg col-md-3 col-lg-3 col-xl-2 text-center p-0">
-            <div class="container-fluid">
-                <a class="navbar-brand pt-2" href="#"><img id="grLogo" src="../public/assets/images/green-river-logo.png"
-                                                           alt="Green River College Logo"></a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
-                        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <!--  Nav Items  -->
-                <div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
-                    <ul class="list-unstyled pt-5">
-                        <a href="#" class="text-decoration-none text-light">
-                            <li class="nav-item">Step 1</li>
-                        </a>
-                        <a href="#" class="text-decoration-none text-light">
-                            <li class="nav-item">Step 2</li>
-                        </a>
-                        <a href="#" class="text-decoration-none text-light">
-                            <li class="nav-item">Step 3</li>
-                        </a>
-                        <a href="#" class="text-decoration-none text-light">
-                            <li class="nav-item">Step 4</li>
-                        </a>
-                        <a href="#" class="text-decoration-none text-light">
-                            <li class="nav-item">Step 5</li>
-                        </a>
-                        <a href="home.html" class="text-decoration-none text-light">
-                            <li class="nav-item logout-button">Logout</li>
-                        </a>
-                    </ul>
-                </div>
+            <!--  Navbar Logo  -->
+            <a class="navbar-brand pt-2 mx-auto" href="#">
+                <img id="grLogo" src="../public/assets/images/green-river-logo.png" alt="Green River College Logo">
+            </a>
+
+            <!--  Navbar Hamburger Menu  -->
+            <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--  Navbar Content  -->
+            <div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
+                <ul class="list-unstyled pt-5">
+
+                    <!--  Nav Items  -->
+                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 1</li></a>
+                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 2</li></a>
+                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 3</li></a>
+                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 4</li></a>
+                    <a href="#" class="text-decoration-none text-light"><li class="nav-item">Step 5</li></a>
+
+                    <!--  Logout  -->
+                    <a href="home.html" class="text-decoration-none text-light">
+                        <li class="nav-item logout-button">Logout</li>
+                    </a>
+                </ul>
             </div>
         </nav>
 
-
-
         <!--  Form Col  -->
-        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-10 mt-3 mb-2">
+        <div class="col-sm-9 col-md-9 col-lg-9 col-xl-10 mt-3 mb-5">
+            <header class="mb-4">
+                <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
+                    <h1>APPLICATION</h1>
+                    <hr class="bg-white">
+                    <h5>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and
+                        APP
+                        for
+                        Natural Resources</h5>
+                </div>
+            </header>
 
-            <div class="mb-5">
-                <header class="mb-4">
-                    <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
-                        <h1>APPLICATION</h1>
-                        <hr class="bg-white">
-                        <h5>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and
-                            APP
-                            for
-                            Natural Resources</h5>
+            <!--  Form  -->
+            <form id="form">
+
+                <!--  Progress Bar  -->
+                <ul id="progressbar">
+                    <li class="active" id="step1">
+                        <strong>Step 1</strong>
+                    </li>
+                    <li id="step2"><strong>Step 2</strong></li>
+                    <li id="step3"><strong>Step 3</strong></li>
+                    <li id="step4"><strong>Step 4</strong></li>
+                    <li id="step5"><strong>Step 5</strong></li>
+                    <li id="step6"><strong>Review and Submit</strong></li>
+                </ul>
+                <br>
+
+                <!--  Step 1  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Read Introductory Information</h2>
+                        <h5 class="fs-subtitle">Step 1</h5>
                     </div>
-                </header>
+                    <input type="button" name="next-step"
+                           class="next-step rounded" value="Next Step"/>
+                </fieldset>
 
-                <form id="form">
-                    <ul id="progressbar">
-                        <li class="active" id="step1">
-                            <strong>Step 1</strong>
-                        </li>
-                        <li id="step2"><strong>Step 2</strong></li>
-                        <li id="step3"><strong>Step 3</strong></li>
-                        <li id="step4"><strong>Step 4</strong></li>
-                        <li id="step5"><strong>Step 5</strong></li>
-                        <li id="step6"><strong>Review and Submit</strong></li>
-                    </ul>
-                    <br>
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Read Introductory Information</h2>
-                            <h5 class="fs-subtitle">Step 1</h5>
-                        </div>
-                        <input type="button" name="next-step"
-                               class="next-step rounded" value="Next Step"/>
-                    </fieldset>
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Pre-requisites and Transcripts</h2>
-                            <h5 class="fs-subtitle">Step 2</h5>
-                        </div>
-                        <input type="button" name="next-step"
-                               class="next-step rounded" value="Next Step"/>
-                        <input type="button" name="previous-step"
-                               class="previous-step rounded"
-                               value="Previous Step"/>
-                    </fieldset>
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Personal Statement</h2>
-                            <h5 class="fs-subtitle">Step 3</h5>
-                        </div>
-                        <div class="form-body pl-5 pr-5 pt-1 pb-2">
-                            <h5>Outline why joining our program will help you reach your educational/career goals. This
-                                statement does not have to be lengthy (we suggest 1-2 pages). Without the letter of
-                                interest/personal statement submitted, your application file will be deemed incomplete
-                                and
-                                not reviewed once the committee meets to assess applications.</h5>
-                            <h5>Requirements:</h5>
-                            <ul>
-                                <li>Upload a word doc</li>
-                                <li>Read and scored from 1-10 points with all reviewing committee scores averaged</li>
-                            </ul>
-                        </div>
-                        <input type="button" name="next-step"
-                               class="next-step rounded" value="Next Step"/>
-                        <input type="button" name="previous-step"
-                               class="previous-step rounded"
-                               value="Previous Step"/>
-                    </fieldset>
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Professional Reference Evaluation Form</h2>
-                            <h5 class="fs-subtitle">Step 4</h5>
-                        </div>
-                        <input type="button" name="next-step"
-                               class="next-step rounded" value="Next Step"/>
-                        <input type="button" name="previous-step"
-                               class="previous-step rounded"
-                               value="Previous Step"/>
-                    </fieldset>
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Video, Volunteer Event, or Immersion Event</h2>
-                            <h5 class="fs-subtitle">Step 5</h5>
-                        </div>
-                        <input type="button" name="next-step"
-                               class="next-step rounded" value="Final Step"/>
-                        <input type="button" name="previous-step"
-                               class="previous-step rounded"
-                               value="Previous Step"/>
-                    </fieldset>
+                <!--  Step 2  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Pre-requisites and Transcripts</h2>
+                        <h5 class="fs-subtitle">Step 2</h5>
+                    </div>
+                    <input type="button" name="next-step"
+                           class="next-step rounded" value="Next Step"/>
+                    <input type="button" name="previous-step"
+                           class="previous-step rounded"
+                           value="Previous Step"/>
+                </fieldset>
 
+                <!--  Step 3  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Personal Statement</h2>
+                        <h5 class="fs-subtitle">Step 3</h5>
+                    </div>
+                    <div class="form-body pl-5 pr-5 pt-1 pb-2">
+                        <h5>Outline why joining our program will help you reach your educational/career goals. This
+                            statement does not have to be lengthy (we suggest 1-2 pages). Without the letter of
+                            interest/personal statement submitted, your application file will be deemed incomplete
+                            and
+                            not reviewed once the committee meets to assess applications.</h5>
+                        <h5>Requirements:</h5>
+                        <ul>
+                            <li>Upload a word doc</li>
+                            <li>Read and scored from 1-10 points with all reviewing committee scores averaged</li>
+                        </ul>
+                    </div>
+                    <input type="button" name="next-step"
+                           class="next-step rounded" value="Next Step"/>
+                    <input type="button" name="previous-step"
+                           class="previous-step rounded"
+                           value="Previous Step"/>
+                </fieldset>
 
-                    <fieldset class="shadow rounded">
-                        <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                            <h2 class="fs-title pl-1 pr-1">Review and Submit</h2>
-                            <h5 class="fs-subtitle">Step 6</h5>
-                        </div>
-                        <div class="finish">
-                            <h5 id="submit" class="next-step text-center rounded">
-                                <strong class="text-uppercase">Submit</strong>
-                            </h5>
-                        </div>
-                        <input type="button" name="previous-step"
-                               class="previous-step rounded"
-                               value="Previous Step"/>
-                    </fieldset>
-                </form>
-            </div>
+                <!--  Step 3  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Professional Reference Evaluation Form</h2>
+                        <h5 class="fs-subtitle">Step 4</h5>
+                    </div>
+                    <input type="button" name="next-step"
+                           class="next-step rounded" value="Next Step"/>
+                    <input type="button" name="previous-step"
+                           class="previous-step rounded"
+                           value="Previous Step"/>
+                </fieldset>
+
+                <!--  Step 4  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Video, Volunteer Event, or Immersion Event</h2>
+                        <h5 class="fs-subtitle">Step 5</h5>
+                    </div>
+                    <input type="button" name="next-step"
+                           class="next-step rounded" value="Final Step"/>
+                    <input type="button" name="previous-step"
+                           class="previous-step rounded"
+                           value="Previous Step"/>
+                </fieldset>
+
+                <!--  Step 5  -->
+                <fieldset class="shadow rounded">
+                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                        <h2 class="fs-title pl-1 pr-1">Review and Submit</h2>
+                        <h5 class="fs-subtitle">Step 6</h5>
+                    </div>
+                    <div class="finish">
+                        <h5 id="submit" class="next-step text-center rounded">
+                            <strong class="text-uppercase">Submit</strong>
+                        </h5>
+                    </div>
+                    <input type="button" name="previous-step"
+                           class="previous-step rounded"
+                           value="Previous Step"/>
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
