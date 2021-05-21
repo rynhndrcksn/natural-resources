@@ -52,9 +52,6 @@ body {
     text-decoration: none;
 }
 
-h2{
-    color: #2F8D46;
-}
 #form {
     text-align: center;
     position: relative;
@@ -66,14 +63,9 @@ h2{
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    width: 100%;
-    margin: 0;
+    width: 80%;
+    margin: auto;
     padding-bottom: 20px;
-    position: relative
-}
-
-.finish {
-    text-align: center
 }
 
 #form fieldset:not(:first-of-type) {
@@ -81,7 +73,7 @@ h2{
 }
 
 #form .previous-step, .next-step {
-    width: 100px;
+    width: 120px;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -90,6 +82,11 @@ h2{
     padding: 10px 5px;
     margin: 10px 5px 10px 0px;
     float: right
+}
+
+#submit {
+    width: 140px;
+
 }
 
 .form, .previous-step {
@@ -107,12 +104,7 @@ h2{
 
 #form .next-step:hover,
 #form .next-step:focus {
-    background-color: #2F8D46
-}
-
-.text {
-    color: #2F8D46;
-    font-weight: normal
+    background-color: #1c5a2b
 }
 
 #progressbar {
@@ -198,4 +190,51 @@ h2{
 
 .progress-bar {
     background-color: #2F8D46
+}
+
+/*HEADER STYLES*/
+header {
+    padding-top: 50px;
+    height: 20em;
+    background: url(../images/gr-forestry.jpg) no-repeat scroll;
+    background-size: cover;
+}
+
+@media (min-width: 800px) {
+    header {
+        background: url(../images/gr-forestry-md.jpg) no-repeat scroll;
+        height: 20em;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    header {
+        background: url(../images/gr-forestry-lg.jpg) no-repeat scroll;
+        height: 20em;
+        background-size: cover;
+    }
+}
+
+#header {
+    background-color: #287b3dc7;
+    width: 80%;
+    text-shadow: 2px 2px black;
+}
+
+@media (max-width: 662px) {
+    #header {
+        width: 100%;
+    }
+}
+
+@media (max-width: 376px) {
+    header {
+        background: none;
+        padding-top: 0;
+    }
+
+    #header {
+        background-color: #287b3d;
+    }
 }
