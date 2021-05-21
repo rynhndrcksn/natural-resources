@@ -15,9 +15,15 @@ body {
 }
 
 /*****  Navbar Styles  *****/
-#navbar {
+nav {
     background: #646a70;
     font-size: 1.25rem;
+}
+
+@media (max-width: 767px) {
+    a.navbar-brand {
+        margin-left: 2em;
+    }
 }
 
 .nav-item
@@ -33,18 +39,26 @@ body {
     width: 100%;!important;
 }
 
-.logout-button{
-    position: absolute;!important;
-    bottom: 0;!important;
-    margin-top: auto;
-    width: 100%;!important;
-    left: auto;!important;
-    right: auto;!important;
+
+@media(min-width: 767px) {
+    .logout-button {
+        position: absolute;
+    !important;
+        bottom: 0;
+    !important;
+        margin-top: auto;
+        width: 100%;
+    !important;
+        left: auto;
+    !important;
+        right: auto;
+    !important;
+    }
 }
 
-
-
-
+ul.list-unstyled {
+    width: 100%;
+}
 
 .steps {
     text-decoration: none;
