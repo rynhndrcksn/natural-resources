@@ -23,10 +23,16 @@
     <div class="row h-100 justify-content-center">
 
         <!--  Navbar Col  -->
-        <div id="navbar" class="col-sm-3 col-md-3 col-lg-3 col-xl-2 text-center p-0">
+        <div id="navbar" class="navbar-dark navbar-expand-lg col-md-3 col-lg-3 col-xl-2 text-center p-0">
             <a class="navbar-brand pt-2" href="#"><img id="grLogo" src="../public/assets/images/green-river-logo.png"
-                                                  alt="Green River College Logo"></a>
+                                                       alt="Green River College Logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <!--  Nav Items  -->
+            <div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
             <ul class="list-unstyled pt-5">
                 <a href="#" class="text-decoration-none text-light">
                     <li class="nav-item">Step 1</li>
@@ -47,6 +53,7 @@
                     <li class="nav-item logout-button">Logout</li>
                 </a>
             </ul>
+            </div>
         </div>
 
         <!--  Form Col  -->
@@ -169,4 +176,6 @@
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 <script src="../public/assets/scripts/application.js"></script>
+<script src="../public/assets/scripts/navbar.js"></script>
+
 </html>
