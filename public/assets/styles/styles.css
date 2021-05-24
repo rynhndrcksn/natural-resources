@@ -305,6 +305,9 @@ footer a.taber {
 footer a.taber:hover {
     text-decoration: none!important;
 }
+ul > li > a:hover {
+    color: #d3d9dd;
+}
 .copyright-text {
     color: #d3d9dd;
     font-size: 13px;
@@ -327,7 +330,7 @@ footer ul li,.taber
     margin-bottom:10px;
 }
 
-@media (max-width:767px)
+@media (max-width:768px)
 {
     .content {
         padding-top: 2%;
