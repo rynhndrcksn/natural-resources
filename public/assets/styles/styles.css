@@ -54,6 +54,24 @@ nav {
         right: auto;
     !important;
     }
+
+    #nav-col {
+        position: fixed;!important;
+        left: 0;
+        height: 100%;
+        display: block;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    }
+
+    #grLogo {
+        margin: auto;
+    }
+
+    #form-col{
+        margin-left: auto;
+    }
 }
 
 ul.list-unstyled {
@@ -88,6 +106,7 @@ ul.list-unstyled {
     #form fieldset {
         width: 100%;
     }
+
 }
 
 #form fieldset:not(:first-of-type) {
@@ -108,7 +127,6 @@ ul.list-unstyled {
 
 #submit {
     width: 140px;
-
 }
 
 .form, .previous-step {
