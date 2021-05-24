@@ -24,6 +24,10 @@ nav {
     a.navbar-brand {
         margin-left: 2em;
     }
+
+    strong {
+        display: none;!important;
+    }
 }
 
 .nav-item
