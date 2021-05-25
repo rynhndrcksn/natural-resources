@@ -24,3 +24,9 @@ CREATE TABLE application (
     applicantID INT UNSIGNED NOT NULL,
     FOREIGN KEY (applicantID) REFERENCES applicant(applicantID)
 );
+
+Create TABLE admin (
+    adminID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    applicantID INT UNSIGNED NOT NULL,
+    FOREIGN KEY(applicantID) REFERENCES application(applicantID)
+);

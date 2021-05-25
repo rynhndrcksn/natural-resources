@@ -129,6 +129,10 @@ ul.list-unstyled {
     float: right
 }
 
+.previous-step {
+    float: left!important;
+    margin-left: 5px!important;
+}
 #submit {
     width: 140px;
 }
