@@ -58,7 +58,7 @@
                         <li class="nav-item">Step 4<br><small>Video, Volunteer Event, or Immersion Event</small></li>
                     </a>
                     <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 5<br><small>Video, Volunteer Event, or Immersion Event</small></li>
+                        <li class="nav-item">Step 5<br><small>Zoom Meeting</small></li>
                     </a>
 
                     <!--  Logout  -->
@@ -121,16 +121,41 @@
                         </ul>
                         <hr>
                         <h5>Submission:</h5>
-                        <ul>
-                            <li>Upload a PDF file of your Degree Audit</li>
-                            <input type="file" name="filename">
-                            <li>Upload all unofficial transcripts (can be photocopies)</li>
-                            <input type="file" name="filename">
-                        </ul>
+
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="form-control custom-file-input" id="degreeAudit">
+                                <label class="custom-file-label" for="degreeAudit">Upload a PDF file of your Degree Audit</label>
+                                <div class="invalid-feedback">Error text</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="form-control custom-file-input" id="transcripts">
+                                <label class="custom-file-label" for="transcripts">Upload all unofficial transcripts (can be photocopies)</label>
+                                <div class="invalid-feedback">Error text</div>
+                            </div>
+                        </div>
+
+                        <div class="custom-control custom-checkbox mb-2">
+                            <input type="checkbox" class="custom-control-input" id="officialTranscripts">
+                            <label class="custom-control-label" for="officialTranscripts">I have sent my official transcripts to the registrar.</label>
+                        </div>
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="transcriptEvaluation">
+                            <label class="custom-control-label" for="transcriptEvaluation">I have submitted a transcript evaluation request to the registrar.</label>
+                        </div>
                     </div>
+
+
                     <input type="button" name="next-step"
                            class="next-step rounded" value="Next Step"/>
                 </fieldset>
+
+
+
 
                 <!--  Step 2  -->
                 <fieldset class="shadow rounded">
@@ -153,17 +178,26 @@
                         </ul>
                         <hr>
                         <h5>Submission:</h5>
-                        <ul>
-                            <li>Upload a file (Word or PDF file) of your <b>scored</b> personal statement</li>
-                            <input type="file" name="filename">
-                        </ul>
+
+                        <div class="form-group">
+                            <div class="custom-file">
+                                <input type="file" class="form-control custom-file-input" id="personalStatement">
+                                <label class="custom-file-label" for="personalStatement">Upload a file (Word or PDF file) of your scored personal statement</label>
+                                <div class="invalid-feedback">Error text</div>
+                            </div>
+                        </div>
                     </div>
+
                     <input type="button" name="next-step"
                            class="next-step rounded" value="Next Step"/>
                     <input type="button" name="previous-step"
                            class="previous-step rounded"
                            value="Previous Step"/>
                 </fieldset>
+
+
+
+
 
                 <!--  Step 3  -->
                 <fieldset class="shadow rounded">
@@ -174,25 +208,50 @@
                     <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
                         <h5>Requirements:</h5>
                         <ul>
-                            <li>For a supervisor, manager, instructor or coach (past or present) to evaluate you on your
+                            <li>Have a supervisor, manager, instructor or coach (past or present) evaluate you on your
                                 skills. It must come directly from them, to me, either via email or to my address below.
-                                If
-                                this form comes through you, it will be rejected. Once we record the evaluation form in
-                                your
-                                file, you may request to see it.
-                            </li>
-                            <li>Begin by downloading and printing the following
-                                document: <a title="Professional Reference Evaluation.doc"
-                                             href="../public/assets/external_files/Professional%20Reference%20Evaluation.doc">Professional
-                                    Reference Evaluation Form</a>
+                                If this form comes through you, it will be rejected. Once we record the evaluation form
                             </li>
                         </ul>
+
+                        <ul>
+                            <li><b>Options 1: By mail</b></li>
+                            <ul>
+                                <li>
+                                    Monica Paulson Priebe-Faculty<br>
+                                    Attention: NATRS DEPT AAS<br>
+                                    12401 SE 320th St. Mailstop CH<br>
+                                    Auburn, WA 98092<br>
+                                </li>
+                            </ul>
+
+                            <li><b>Option 2: By email</b></li>
+                            <ul>
+                                <li>
+                                    Email to natrs.waitlist@gmail.com, subject line "AAS"<br>
+
+                                    <b>Note:</b> Submitted applications become the property of Green River
+                                    College and materials will not be returned to the applicant.
+                                </li>
+                            </ul>
+                        </ul>
+
+                        <li>Begin by downloading and printing the following
+                            document: <a title="Professional Reference Evaluation.doc"
+                                         href="../public/assets/external_files/Professional%20Reference%20Evaluation.doc">Professional
+                                Reference Evaluation Form</a>
+                        </li>
+
                         <hr>
                         <h5>Submission:</h5>
-                        <ul>
-                            <li>Upload a file (Word or PDF file) of your evaluation form</li>
-                            <input type="file" name="filename">
-                        </ul>
+
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="evaluationForm">
+                            <label class="custom-control-label" for="evaluationForm">I have submitted a Professional
+                                Evaluation of Performance form to a previous supervisor, manager, instructor or
+                                coach.</label>
+                        </div>
+
                     </div>
                     <input type="button" name="next-step"
                            class="next-step rounded" value="Next Step"/>
@@ -239,6 +298,14 @@
                         </ul>
                         <hr>
                         <h5>Submission:</h5>
+
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Option 1: Submit a 3-5 min video</option>
+                                <option>Option 2: Complete a volunteer event within the natural resources field</option>
+                                <option>Option 3: Completion of a GRC NATRS Immersion Event (subject to school approval due to COVID-19)</option>
+                            </select>
+                        </div>
 
                     </div>
                     <input type="button" name="next-step"
