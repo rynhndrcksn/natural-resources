@@ -23,11 +23,12 @@
     <div class="row h-100 justify-content-center">
 
         <!--  Navbar Col  -->
-        <nav class="navbar-expand-md navbar-dark navbar-expand-lg col-md-3 col-lg-2 col-xl-2 text-center p-0">
+        <nav id="nav-col"
+             class="navbar navbar-expand-md navbar-dark navbar-expand-lg col-md-3 col-lg-2 col-xl-2 text-center">
 
             <!--  Navbar Logo  -->
-            <a class="navbar-brand pt-2 mx-auto" href="#">
-                <img id="grLogo" src="../public/assets/images/green-river-logo.png" alt="Green River College Logo">
+            <a id="grLogo" class="navbar-brand pt-2" href="#">
+                <img src="../public/assets/images/green-river-logo.png" alt="Green River College Logo">
             </a>
 
             <!--  Navbar Hamburger Menu  -->
@@ -46,19 +47,19 @@
                         <li class="nav-item">My Profile</li>
                     </a>
                     <a href="studentPortal.html" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 1</li>
+                        <li class="nav-item" id="step2btn">Step 1<br><small>Pre-requisites and Transcripts</small></li>
+                    </a>
+                    <a href="#step2Section" class="text-decoration-none text-light">
+                        <li class="nav-item">Step 2<br><small>Personal Statement</small></li>
                     </a>
                     <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 2</li>
+                        <li class="nav-item">Step 3<br><small>Professional Reference Evaluation Form</small></li>
                     </a>
                     <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 3</li>
+                        <li class="nav-item">Step 4<br><small>Video, Volunteer Event, or Immersion Event</small></li>
                     </a>
                     <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 4</li>
-                    </a>
-                    <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 5</li>
+                        <li class="nav-item">Step 5<br><small>Zoom Meeting</small></li>
                     </a>
 
                     <!--  Logout  -->
@@ -70,7 +71,7 @@
         </nav>
 
         <!--  Form Col  -->
-        <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10 p-0">
+        <div id="form-col" class="col-sm-12 col-md-9 col-lg-10 col-xl-10 p-0">
             <header class="mb-4">
                 <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
                     <h1 class="text-uppercase">My Profile</h1>
@@ -84,25 +85,25 @@
 
             <!--  Form  -->
             <div class="container-fluid" id="studentInfo">
-                        <h3 class="text-center">Student Information</h3>
-                        <hr>
-                        <dl class="row">
-                            <dt class="col-4">First Name</dt>
-                            <dd class="col-8">Jane</dd>
-                            <dt class="col-4">Last Name</dt>
-                            <dd class="col-8">Doe</dd>
-                            <dt class="col-4">Student ID</dt>
-                            <dd class="col-8">8409999999</dd>
-                            <dt class="col-4">Email</dt>
-                            <dd class="col-8">
-                                <a href="">JDoe@mail.greenriver.edu</a>
-                            </dd>
-                        </dl>
-                        <hr>
-                        <dl class="row">
-                            <dt class="col-4">Intended Field in NATR</dt>
-                            <dd class="col-8">Water Quality</dd>
-                        </dl>
+                <h3 class="text-center">Student Information</h3>
+                <hr>
+                <dl class="row">
+                    <dt class="col-4">First Name</dt>
+                    <dd class="col-8">Jane</dd>
+                    <dt class="col-4">Last Name</dt>
+                    <dd class="col-8">Doe</dd>
+                    <dt class="col-4">Student ID</dt>
+                    <dd class="col-8">8409999999</dd>
+                    <dt class="col-4">Email</dt>
+                    <dd class="col-8">
+                        <a href="">JDoe@mail.greenriver.edu</a>
+                    </dd>
+                </dl>
+                <hr>
+                <dl class="row">
+                    <dt class="col-4">Intended Field in NATR</dt>
+                    <dd class="col-8">Water Quality</dd>
+                </dl>
 
                 <br>
                 <div class="ml-auto mr-auto text-center">
@@ -128,7 +129,8 @@
                             <hr class="background-white">
                             <ul>
                                 <li>
-                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/">Green River
+                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/" target="_blank">Green
+                                        River
                                         College</a>
                                 </li>
                                 <li>
@@ -140,22 +142,24 @@
                         QvALRB8BXqVvPdhtwfJWb47OQiHkXhp1Nf5iJSNgVo2ThD2ykGnaY6X_Oa6dFCJRcQaD-oZZr4490u0NgMruHJNtMBUEg2N
                         HMBdpRo8dec0ODAEjoc8vQsm6HeZ4HZuNd9nt_DXpfEz3Ty-fcBH3zKXpVCfUDfavL66-YZE904pKwtVb4vcdTsHrQzhfIH
                         C7Sy7W2dfRKEgl9XcWNWRJeObObtWP0ZmhGkr8dX1LgSkerxL1D7zYw0pNChO4JymN3Q&x-client-SKU=ID_NETSTANDAR
-                        D2_0&x-client-ver=5.6.0.0&sso_reload=true">My Green River</a>
+                        D2_0&x-client-ver=5.6.0.0&sso_reload=true" target="_blank">My Green River</a>
                                 </li>
                                 <li>
-                                    <a class="hyperlink-removed" href="https://egator.greenriver.edu/">Canvas</a>
+                                    <a class="hyperlink-removed" href="https://egator.greenriver.edu/" target="_blank">Canvas</a>
                                 </li>
                                 <li>
                                     <a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/dates/">
+                                       href="https://www.greenriver.edu/students/academics/dates/" target="_blank">
                                         Academic Calendar</a>
                                 </li>
                                 <li>
-                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/students/academics/enrollment-services/degree-audit/">Degree Audit</a>
+                                    <a class="hyperlink-removed"
+                                       href="https://www.greenriver.edu/students/academics/enrollment-services/degree-audit/"
+                                       target="_blank">Degree Audit</a>
                                 </li>
                                 <li>
                                     <a class="hyperlink-removed" href="https://www.greenriver.edu/students/online-services/student-
-                        virtual-desktop/">Student Virtual Desktop</a>
+                        virtual-desktop/" target="_blank">Student Virtual Desktop</a>
                                 </li>
                             </ul>
                         </div>
@@ -169,13 +173,16 @@
                             <hr class="background-white">
                             <ul class="content">
                                 <li><a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/degrees-programs/natural-resources/">More
+                                       href="https://www.greenriver.edu/students/academics/degrees-programs/natural-resources/"
+                                       target="_blank">More
                                     About Natural Resources Program</a></li>
                                 <li><a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/degrees-programs/bachelor-of-applied-science/bachelor%E2%80%99s-in-forest-resource-management/meet-the-team/">Meet
+                                       href="https://www.greenriver.edu/students/academics/degrees-programs/bachelor-of-applied-science/bachelor%E2%80%99s-in-forest-resource-management/meet-the-team/"
+                                       target="_blank">Meet
                                     the Team</a></li>
                                 <li><a class="hyperlink-removed"
-                                       href="https://catalog.greenriver.edu/content.php?filter%5B27%5D=NATRS&filter%5B29%5D=&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=4&expand=&navoid=163&search_database=Filter#acalog_template_course_filter">Course
+                                       href="https://catalog.greenriver.edu/content.php?filter%5B27%5D=NATRS&filter%5B29%5D=&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=4&expand=&navoid=163&search_database=Filter#acalog_template_course_filter"
+                                       target="_blank">Course
                                     Descriptions</a></li>
                             </ul>
                         </div>

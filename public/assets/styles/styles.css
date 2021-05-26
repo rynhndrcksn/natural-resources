@@ -21,10 +21,6 @@ nav {
 }
 
 @media (max-width: 767px) {
-    a.navbar-brand {
-        margin-left: 2em;
-    }
-
     strong {
         display: none;!important;
     }
@@ -156,7 +152,6 @@ ul.list-unstyled {
 }
 
 #progressbar {
-    margin-bottom: 30px;
     overflow: hidden;
     color: lightgrey
 }
