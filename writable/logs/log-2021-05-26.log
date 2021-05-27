@@ -6,3 +6,11 @@ CRITICAL - 2021-05-26 01:03:44 --> Use of undefined constant results - assumed '
 #4 /home/rriverag/public_html/natural-resources/vendor/codeigniter4/framework/system/CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 /home/rriverag/public_html/natural-resources/public/index.php(44): CodeIgniter\CodeIgniter->run()
 #6 {main}
+CRITICAL - 2021-05-26 11:10:08 --> Use of undefined constant results - assumed 'results' (this will throw an Error in a future version of PHP)
+#0 /home/rriverag/public_html/natural-resources/app/Models/LoginModel.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', '/home/rriverag/...', 48, Array)
+#1 /home/rriverag/public_html/natural-resources/app/Controllers/Login.php(28): App\Models\LoginModel->getUser('ryan@yahoo.com', 'password')
+#2 /home/rriverag/public_html/natural-resources/vendor/codeigniter4/framework/system/CodeIgniter.php(931): App\Controllers\Login->index()
+#3 /home/rriverag/public_html/natural-resources/vendor/codeigniter4/framework/system/CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 /home/rriverag/public_html/natural-resources/vendor/codeigniter4/framework/system/CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /home/rriverag/public_html/natural-resources/public/index.php(44): CodeIgniter\CodeIgniter->run()
+#6 {main}
