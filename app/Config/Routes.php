@@ -35,6 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 
 $routes->match(['get', 'post'], '/login', 'Login::index');
+$routes->match(['get', 'post'], '/portal', 'Student::portal');
+$routes->match(['get', 'post'], '/profile', 'Student::profile');
 
 /*
  * --------------------------------------------------------------------

@@ -32,6 +32,7 @@ class Login extends BaseController
                 echo "<p>".$session->get('user')->getFirst()."</p>";
                 echo "<p>".$session->get('user')->getLast()."</p>";
                 echo "<p>".$session->get('user')->getEmail()."</p>";
+                $session->destroy();
             }
         }
 
