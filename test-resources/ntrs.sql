@@ -1,11 +1,13 @@
 CREATE TABLE account(
-    accountID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    accountID INT UNSIGNED AUTO_INCREMENT NOT NULL,
     email VARCHAR(50) NOT NULL,
-    password VARCHAR(50) NOT NULL,
+    pass VARCHAR(50) NOT NULL,
     first VARCHAR(20) NOT NULL,
     last VARCHAR(50) NOT NULL,
     sid INT UNSIGNED NOT NULL,
-    role TINYINT(1) NOT NULL
+    program varchar(50) NOT NULL,
+    role TINYINT(1) NOT NULL,
+    PRIMARY KEY (accountID)
 );
 
 CREATE TABLE applicant (
