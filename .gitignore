@@ -1,5 +1,6 @@
 # user defined
 composer.lock
+.env
 
 # end of user defined
 
