@@ -1,6 +1,8 @@
 # user defined
 composer.lock
 .env
+writable/
+vendor/
 
 # end of user defined
 
