@@ -23,33 +23,34 @@ class LoginModel extends Model
             'email'     => $email,
             'pass' => $pass
         ]);
-
         $row = $results->getRow();
 
         return isset($row);
     }
 
-    //Verify password matches user
-    public function getUser($email, $pass): User
+    //Verify password matches user, then get and store the user info in the session
+    public function getUser($email, $pass)
     {
-        //Connect to the DB
+        //Connect to the DB, build query
         $db = db_connect();
-
-        //SQL query format
         $sql = "SELECT * FROM account WHERE email = :email: AND pass = :pass:";
 
-        //Send query, store results
+        //Send query then store the results
         $results = $db->query($sql, [
             'email'     => $email,
             'pass' => $pass
         ]);
-
         $results = $results->getResultArray()[0];
 
-        //If results array is not empty
-        if(!empty($results)){
-            return new User($results['email'], $results['first'], $results['last'], $results['sid'], $results['role'],
-                $results['program']);
-        }
+        //Start a session then store the user information in it
+        $session = session();
+        $session->set('user', [
+            'first' => $results['first'],
+            'last' => $results['last'],
+            'email' => $results['email'],
+            'sid' => $results['sid'],
+            'program' => $results['program'],
+            'role' => $results['role']
+        ]);
     }
 }

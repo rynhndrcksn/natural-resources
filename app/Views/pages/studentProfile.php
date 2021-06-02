@@ -39,18 +39,18 @@
             <dt class="col-4">First Name</dt>
             <dd class="col-8"><?= esc(ucfirst($first)) ?></dd>
             <dt class="col-4">Last Name</dt>
-            <dd class="col-8">Doe</dd>
+            <dd class="col-8"><?= esc(ucfirst($last)) ?></dd>
             <dt class="col-4">Student ID</dt>
-            <dd class="col-8">8409999999</dd>
+            <dd class="col-8"><?= esc(ucfirst($sid)) ?></dd>
             <dt class="col-4">Email</dt>
             <dd class="col-8">
-                <a href="">JDoe@mail.greenriver.edu</a>
+                <a href=""><?= esc(ucfirst($email)) ?></a>
             </dd>
         </dl>
         <hr>
         <dl class="row">
             <dt class="col-4">Intended Field in NATR</dt>
-            <dd class="col-8">Water Quality</dd>
+            <dd class="col-8"><?= esc(ucfirst($program)) ?></dd>
         </dl>
 
         <br>
