@@ -26,10 +26,10 @@ class Login extends BaseController
                 $model->getUser($email, $pass);
 
                 //Redirect
-                return redirect()->to('http://rrivera.greenriverdev.com/natural-resources/public/profile');
+                return redirect()->to(base_url('/profile'));
             }
         }
 
-        return view('pages/login.html');
+        return view('pages/login.php');
     }
 }
