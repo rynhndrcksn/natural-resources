@@ -6,13 +6,16 @@ class Student extends BaseController
 {
     public function portal()
     {
-        return view('pages/studentPortal.html');
+        echo view('templates/header');
+        echo view('pages/studentPortal.html');
+        echo view('templates/footer');
 
     }
 
     public function profile()
     {
-        return view('pages/studentProfile.html');
-
+        echo view('templates/header');
+        echo view('pages/studentProfile.html');
+        echo view('templates/footer');
     }
 }

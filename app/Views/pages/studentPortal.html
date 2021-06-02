@@ -1,465 +1,294 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--  Navbar Content  -->
+<div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
+    <ul class="list-unstyled pt-5">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="../public/assets/styles/styles.css">
+        <!--  Nav Items  -->
+        <a href="profile" class="text-decoration-none text-light">
+            <li class="nav-item">My Profile</li>
+        </a>
+        <a href="portal" class="text-decoration-none text-light">
+            <li class="nav-item" id="step2btn">Step 1<br><small>Pre-requisites and Transcripts</small></li>
+        </a>
+        <a href="#step2Section" class="text-decoration-none text-light">
+            <li class="nav-item">Step 2<br><small>Personal Statement</small></li>
+        </a>
+        <a href="#" class="text-decoration-none text-light">
+            <li class="nav-item">Step 3<br><small>Professional Reference Evaluation Form</small></li>
+        </a>
+        <a href="#" class="text-decoration-none text-light">
+            <li class="nav-item">Step 4<br><small>Video, Volunteer Event, or Immersion Event</small></li>
+        </a>
+        <a href="#" class="text-decoration-none text-light">
+            <li class="nav-item">Step 5<br><small>Zoom Meeting</small></li>
+        </a>
 
-    <title>NATRS Application Portal</title>
-    <!--Favicon-->
-    <link rel="icon" href="../public/assets/images/green-river-logo.png">
-</head>
-<body>
-
-<!--  Page Content  -->
-<div class="container-fluid h-100">
-
-    <!--  Row  -->
-    <div class="row h-100 justify-content-center">
-
-        <!--  Navbar Col  -->
-        <nav id="nav-col" class="navbar navbar-expand-md navbar-dark navbar-expand-lg col-md-3 col-lg-2 col-xl-2 text-center">
-
-            <!--  Navbar Logo  -->
-            <a id="grLogo" class="navbar-brand pt-2" href="#">
-                <img src="../public/assets/images/green-river-logo.png" alt="Green River College Logo">
-            </a>
-
-            <!--  Navbar Hamburger Menu  -->
-            <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarToggler"
-                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!--  Navbar Content  -->
-            <div class="collapse navbar-collapse justify-content-around" id="navbarToggler">
-                <ul class="list-unstyled pt-5">
-
-                    <!--  Nav Items  -->
-                    <a href="profile" class="text-decoration-none text-light">
-                        <li class="nav-item">My Profile</li>
-                    </a>
-                    <a href="portal" class="text-decoration-none text-light">
-                        <li class="nav-item" id="step2btn">Step 1<br><small>Pre-requisites and Transcripts</small></li>
-                    </a>
-                    <a href="#step2Section" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 2<br><small>Personal Statement</small></li>
-                    </a>
-                    <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 3<br><small>Professional Reference Evaluation Form</small></li>
-                    </a>
-                    <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 4<br><small>Video, Volunteer Event, or Immersion Event</small></li>
-                    </a>
-                    <a href="#" class="text-decoration-none text-light">
-                        <li class="nav-item">Step 5<br><small>Zoom Meeting</small></li>
-                    </a>
-
-                    <!--  Logout  -->
-                    <a href="home" class="text-decoration-none text-light"><li class="nav-item logout-button">Logout</li>
-                    </a>
-                </ul>
-            </div>
-        </nav>
-
-        <!--  Form Col  -->
-        <div id="form-col" class="col-sm-12 col-md-9 col-lg-10 col-xl-10 p-0">
-            <header class="mb-4">
-                <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
-                    <h1 class="text-uppercase">Application</h1>
-                    <hr class="bg-white">
-                    <h5>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and
-                        APP
-                        for
-                        Natural Resources</h5>
-                </div>
-            </header>
-
-            <!--  Form  -->
-            <form id="form" class="mb-5">
-
-                <!--  Progress Bar  -->
-                <ul id="progressbar">
-                    <li class="active" id="step1">
-                        <strong>Pre-requisites and Transcripts</strong>
-                    </li>
-                    <li id="step2"><strong>Personal Statement</strong></li>
-                    <li id="step3"><strong>Professional Reference Evaluation Form</strong></li>
-                    <li id="step4"><strong>Video, Volunteer Event, or Immersion Event</strong></li>
-                    <li id="step5"><strong>Zoom Meeting</strong></li>
-                    <li id="step6"><strong>Review and Submit</strong></li>
-                </ul>
-                <br>
-
-                <!--  Step 1  -->
-                <fieldset class="shadow rounded" id="step1Section">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Pre-requisites and Transcripts</h2>
-                        <h5 class="fs-subtitle">Step 1</h5>
-                    </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
-                        <h5>Requirements:</h5>
-                        <ul>
-                            <li>Complete the pre-requisite courses: Engl& 101, Cmst& 220, Engl 128 and Math 070</li>
-                            <li>Have a minimum college-level cumulative GPA of 2.5</li>
-                            <li>Submit Official Transcripts (in original sealed envelopes) for all non-Green River
-                                courses to The Office of the Registrar
-                            </li>
-                            <li>Transcript Evaluation Request form must then be submitted with "Official Transcripts"
-                                (sealed in original envelopes) to the Registrar prior to applying to the NATRS AAS.
-                            </li>
-                            <li>All unofficial transcripts (including Green River if applicable)–Even though you may
-                                have submitted official transcripts to the Registrar, you still need to submit
-                                unofficial transcripts with this packet. These can be photocopies.
-                            </li>
-                        </ul>
-                        <hr>
-                        <h5>Submission:</h5>
-
-                        <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="form-control custom-file-input" id="degreeAudit">
-                                <label class="custom-file-label" for="degreeAudit">Upload a PDF file of your Degree Audit</label>
-                                <div class="invalid-feedback">Error text</div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="form-control custom-file-input" id="transcripts">
-                                <label class="custom-file-label" for="transcripts">Upload all unofficial transcripts (can be photocopies)</label>
-                                <div class="invalid-feedback">Error text</div>
-                            </div>
-                        </div>
-
-                        <div class="custom-control custom-checkbox mb-2">
-                            <input type="checkbox" class="custom-control-input" id="officialTranscripts">
-                            <label class="custom-control-label" for="officialTranscripts">I have sent my official transcripts to the registrar.</label>
-                        </div>
-
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="transcriptEvaluation">
-                            <label class="custom-control-label" for="transcriptEvaluation">I have submitted a transcript evaluation request to the registrar.</label>
-                        </div>
-                    </div>
-
-
-                    <input type="button" name="next-step"
-                           class="next-step rounded" value="Next Step"/>
-                </fieldset>
-
-
-                <!--  Step 2  -->
-                <fieldset class="shadow rounded" id="step2Section">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Personal Statement</h2>
-                        <h5 class="fs-subtitle">Step 2</h5>
-                    </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
-                        <h5>Requirements:</h5>
-                        <ul>
-                            <li>Outline why joining our program will help you reach your educational/career goals. This
-                                statement does not have to be lengthy (we suggest 1-2 pages). Without the letter of
-                                interest/personal statement submitted, your application file will be deemed incomplete
-                                and
-                                not reviewed once the committee meets to assess applications.
-                            </li>
-                            <li>Statement read and scored from 1-10 points with all reviewing committee scores
-                                averaged
-                            </li>
-                        </ul>
-                        <hr>
-                        <h5>Submission:</h5>
-
-                        <div class="form-group">
-                            <div class="custom-file">
-                                <input type="file" class="form-control custom-file-input" id="personalStatement">
-                                <label class="custom-file-label" for="personalStatement">Upload a file (Word or PDF file) of your scored personal statement</label>
-                                <div class="invalid-feedback">Error text</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <input type="button" name="next-step"
-                           class="next-step rounded" value="Next Step"/>
-                    <input type="button" name="previous-step"
-                           class="previous-step rounded"
-                           value="Previous Step"/>
-                </fieldset>
-
-
-                <!--  Step 3  -->
-                <fieldset class="shadow rounded" id="step3Section">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Professional Reference Evaluation Form</h2>
-                        <h5 class="fs-subtitle">Step 3</h5>
-                    </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
-                        <h5>Requirements:</h5>
-                        <ul class="pl-4">
-                            <li>Have a supervisor, manager, instructor or coach (past or present) evaluate you on your
-                                skills. It must come directly from them, to me, either via email or to my address below.
-                                If this form comes through you, it will be rejected. Once we record the evaluation form
-                            </li>
-
-                        <ul class="pl-4">
-                            <li><b>Option 1: By mail</b></li>
-                            <p>
-                                    Monica Paulson Priebe-Faculty<br>
-                                    Attention: NATRS DEPT AAS<br>
-                                    12401 SE 320th St. Mailstop CH<br>
-                                    Auburn, WA 98092<br>
-                            </p>
-
-                            <li><b>Option 2: By email</b></li>
-                            <p>
-                                    Email to natrs.waitlist@gmail.com, subject line "AAS"<br>
-
-                                    <b>Note:</b> Submitted applications become the property of Green River
-                                    College and materials will not be returned to the applicant.
-                            </p>
-                        </ul>
-
-                        <li>Begin by downloading and printing the following
-                            document: <a title="Professional Reference Evaluation.doc"
-                                         href="../public/assets/external_files/Professional%20Reference%20Evaluation.doc">Professional
-                                Reference Evaluation Form</a>
-                        </li>
-                        </ul>
-                        <hr>
-                        <h5>Submission:</h5>
-
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="evaluationForm">
-                            <label class="custom-control-label" for="evaluationForm">I have submitted a Professional
-                                Evaluation of Performance form to a previous supervisor, manager, instructor or
-                                coach.</label>
-                        </div>
-
-                    </div>
-                    <input type="button" name="next-step"
-                           class="next-step rounded" value="Next Step"/>
-                    <input type="button" name="previous-step"
-                           class="previous-step rounded"
-                           value="Previous Step"/>
-                </fieldset>
-
-                <!--  Step 4  -->
-                <fieldset class="shadow rounded" id="step4Section">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Video, Volunteer Event, or Immersion Event</h2>
-                        <h5 class="fs-subtitle">Step 4</h5>
-                    </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
-                        <h5>Requirements:</h5>
-                        <ul class="pl-4">
-                            <li><b>Option 1: Submit a 3-5 min video</b></li>
-                            <ul class="pl-4">
-                                <li>Include video instructions and video upload instructions in a dropdown if they
-                                    choose to
-                                    do the video option
-                                </li>
-                            </ul>
-                            <li><b>Option 2: Complete a volunteer event within the natural resources field</b></li>
-                             <ul class="pl-4">
-                                <li>You will have to include a 1-3 page write up regarding the event, what you completed
-                                    and
-                                    what you learned. Please include at least one photo of yourself participating in the
-                                    event. (Examples: WTA trail clearing event, stream restoration event with a city or
-                                    county entity, volunteering at a fish hatchery, etc.)
-                                </li>
-                            </ul>
-                            <li><b>Option 3: Completion of a GRC NATRS Immersion Event (subject to school approval due
-                                to
-                                COVID-19)</b></li>
-                             <ul class="pl-4">
-                                <li>The Immersion Events consist of a 6 hour on campus Q & A about the
-                                    program/history/student resources/student expectations followed by a trail hike
-                                    throughout the campus onsite forest or an on-campus work project (invasive species
-                                    removal, trail clearing project, wood stacking, hazard tree assessment, etc).
-                                </li>
-                            </ul>
-                        </ul>
-                        <hr>
-                        <h5>Submission:</h5>
-
-                        <div class="form-group">
-                            <select class="form-control">
-                                <option>Option 1: Submit a 3-5 min video</option>
-                                <option>Option 2: Complete a volunteer event within the natural resources field</option>
-                                <option>Option 3: Completion of a GRC NATRS Immersion Event (subject to school approval due to COVID-19)</option>
-                            </select>
-                        </div>
-
-                    </div>
-                    <input type="button" name="next-step"
-                           class="next-step rounded" value="Next Step"/>
-                    <input type="button" name="previous-step"
-                           class="previous-step rounded"
-                           value="Previous Step"/>
-                </fieldset>
-
-                <!--  Step 5  -->
-                <fieldset class="shadow rounded" id="step5Section">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Zoom Meeting</h2>
-                        <h5 class="fs-subtitle">Step 5</h5>
-                    </div>
-                    <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
-                        <h5>Requirements:</h5>
-                        <ul>
-                            <li>Complete one NATRS department Speed Discussion Zoom Meeting event</li>
-                        </ul>
-                        <hr>
-                        <h5>Submission:</h5>
-                    </div>
-                    <input type="button" name="next-step"
-                           class="next-step rounded" value="Final Step"/>
-                    <input type="button" name="previous-step"
-                           class="previous-step rounded"
-                           value="Previous Step"/>
-                </fieldset>
-
-                <!--  Step 6  -->
-                <fieldset class="shadow rounded">
-                    <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
-                        <h2 class="fs-title pl-1 pr-1">Review and Submit</h2>
-                        <h5 class="fs-subtitle">Step 6</h5>
-                    </div>
-                    <div class="finish">
-                        <h5 id="submit" class="next-step text-center rounded">
-                            <strong class="text-uppercase">Submit</strong>
-                        </h5>
-                    </div>
-                    <input type="button" name="previous-step"
-                           class="previous-step rounded"
-                           value="Previous Step"/>
-                </fieldset>
-            </form>
-
-            <!-- Collapsible Footer -->
-            <footer class="footer text-white text-decoration-none">
-                <!--  Top Row  -->
-                <div class="top-container row row-cols-1 row-cols-md-3 row-cols-lg-3 justify-content-center text-center mx-auto  pt-3">
-                    <!--  Left Column  -->
-                    <div class="col">
-                        <a class="taber text-uppercase" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                            Student Resources
-                        </a>
-                        <div id="collapseOne" class="panel-collapse collapse in pt-2" role="tabpanel">
-                            <hr class="background-white">
-                            <ul>
-                                <li>
-                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/" target="_blank">Green
-                                        River
-                                        College</a>
-                                </li>
-                                <li>
-                                    <a class="hyperlink-removed" href="https://login.microsoftonline.com/49d1e695-839f-40ae-a8b3-
-                        0a2de9d671b5/oauth2/authorize?client_id=8383e4ac-4bcd-493b-b37e-66f76f292346&redirect_uri=https
-                        %3A%2F%2Fmy.greenriver.edu%2Fsignin-oidc&response_type=id_token&scope=openid%20profile&response
-                        _mode=form_post&nonce=637508004443671642.MzVhNWMzMjQtNDdjNC00YjU5LTljMmMtM2NmNDIxNzcyM2U5ZjJmNz
-                        Y2NjYtYzU2OC00ZDY3LThmYTctNmQzODBlM2RiYzZi&state=CfDJ8ABaWuxjIk9NvJ80TUWqy1GZdLw7VGbq_m5JtUfM2T
-                        QvALRB8BXqVvPdhtwfJWb47OQiHkXhp1Nf5iJSNgVo2ThD2ykGnaY6X_Oa6dFCJRcQaD-oZZr4490u0NgMruHJNtMBUEg2N
-                        HMBdpRo8dec0ODAEjoc8vQsm6HeZ4HZuNd9nt_DXpfEz3Ty-fcBH3zKXpVCfUDfavL66-YZE904pKwtVb4vcdTsHrQzhfIH
-                        C7Sy7W2dfRKEgl9XcWNWRJeObObtWP0ZmhGkr8dX1LgSkerxL1D7zYw0pNChO4JymN3Q&x-client-SKU=ID_NETSTANDAR
-                        D2_0&x-client-ver=5.6.0.0&sso_reload=true" target="_blank">My Green River</a>
-                                </li>
-                                <li>
-                                    <a class="hyperlink-removed" href="https://egator.greenriver.edu/" target="_blank">Canvas</a>
-                                </li>
-                                <li>
-                                    <a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/dates/" target="_blank">
-                                        Academic Calendar</a>
-                                </li>
-                                <li>
-                                    <a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/enrollment-services/degree-audit/"
-                                       target="_blank">Degree Audit</a>
-                                </li>
-                                <li>
-                                    <a class="hyperlink-removed" href="https://www.greenriver.edu/students/online-services/student-
-                        virtual-desktop/" target="_blank">Student Virtual Desktop</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <a class="taber text-uppercase" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapsetwo" aria-expanded="false" aria-controls="collapseOne">
-                            More Info
-                        </a>
-                        <div id="collapsetwo" class="panel-collapse collapse in pt-2" role="tabpanel">
-                            <hr class="background-white">
-                            <ul class="content">
-                                <li><a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/degrees-programs/natural-resources/"
-                                       target="_blank">More
-                                    About Natural Resources Program</a></li>
-                                <li><a class="hyperlink-removed"
-                                       href="https://www.greenriver.edu/students/academics/degrees-programs/bachelor-of-applied-science/bachelor%E2%80%99s-in-forest-resource-management/meet-the-team/"
-                                       target="_blank">Meet
-                                    the Team</a></li>
-                                <li><a class="hyperlink-removed"
-                                       href="https://catalog.greenriver.edu/content.php?filter%5B27%5D=NATRS&filter%5B29%5D=&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=4&expand=&navoid=163&search_database=Filter#acalog_template_course_filter"
-                                       target="_blank">Course
-                                    Descriptions</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-lg-3">
-                        <a class="taber text-uppercase" data-toggle="collapse" data-parent="#accordion"
-                           href="#collapsethree" aria-expanded="false" aria-controls="collapseOne">
-                            Contact Us
-                        </a>
-
-                        <div id="collapsethree" class="panel-collapse collapse in pt-2" role="tabpanel">
-                            <hr class="background-white">
-                            <ul>
-                                <li>
-                                    <a class="hyperlink-removed" href="mailto:MPriebe@greenriver.edu">Dr. Monica Paulson
-                                        Priebe</a>
-                                </li>
-                                <li>Natural Resources Faculty
-                                    253-833-9111, ext. 4509
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!--  Bottom -->
-                <div class="text-center copyright-text">
-                    <p>© Created by AR2D2</p>
-                </div>
-            </footer>
-        </div>
-
-    </div>
+        <!--  Logout  -->
+        <a href="home" class="text-decoration-none text-light">
+            <li class="nav-item logout-button">Logout</li>
+        </a>
+    </ul>
 </div>
-</body>
+</nav>
 
-<!-- JavaScript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-<script src="//code.jquery.com/jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-        crossorigin="anonymous"></script>
-<script src="../public/assets/scripts/application.js"></script>
-<script src="../public/assets/scripts/navbar_and_footer.js"></script>
+<!--  Form Col  -->
+<div id="form-col" class="col-sm-12 col-md-9 col-lg-10 col-xl-10 p-0">
+    <header class="mb-4">
+        <div id="header" class="p-4 rounded-top text-center mx-auto text-white">
+            <h1 class="text-uppercase">Application</h1>
+            <hr class="bg-white">
+            <h5>ASSOCIATE OF APPLIED SCIENCE Forestry, Park Management, Water Quality, Wildland Fire, GIS and
+                APP
+                for
+                Natural Resources</h5>
+        </div>
+    </header>
 
-</html>
+    <!--  Form  -->
+    <form id="form" class="mb-5">
+
+        <!--  Progress Bar  -->
+        <ul id="progressbar">
+            <li class="active" id="step1">
+                <strong>Pre-requisites and Transcripts</strong>
+            </li>
+            <li id="step2"><strong>Personal Statement</strong></li>
+            <li id="step3"><strong>Professional Reference Evaluation Form</strong></li>
+            <li id="step4"><strong>Video, Volunteer Event, or Immersion Event</strong></li>
+            <li id="step5"><strong>Zoom Meeting</strong></li>
+            <li id="step6"><strong>Review and Submit</strong></li>
+        </ul>
+        <br>
+
+        <!--  Step 1  -->
+        <fieldset class="shadow rounded" id="step1Section">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Pre-requisites and Transcripts</h2>
+                <h5 class="fs-subtitle">Step 1</h5>
+            </div>
+            <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
+                <h5>Requirements:</h5>
+                <ul>
+                    <li>Complete the pre-requisite courses: Engl& 101, Cmst& 220, Engl 128 and Math 070</li>
+                    <li>Have a minimum college-level cumulative GPA of 2.5</li>
+                    <li>All unofficial transcripts (including Green River if applicable)–Even though you may
+                        have submitted official transcripts to the Registrar, you still need to submit
+                        unofficial transcripts with this packet. These can be photocopies.
+                    </li>
+                </ul>
+                <hr>
+                <h5>Submission:</h5>
+
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="form-control custom-file-input" id="degreeAudit">
+                        <label class="custom-file-label" for="degreeAudit">Upload a PDF file of your Degree
+                            Audit</label>
+                        <div class="invalid-feedback">Error text</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="form-control custom-file-input" id="transcripts">
+                        <label class="custom-file-label" for="transcripts">Upload all unofficial transcripts (can be
+                            photocopies)</label>
+                        <div class="invalid-feedback">Error text</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <input type="button" name="next-step"
+                   class="next-step rounded" value="Next Step"/>
+        </fieldset>
+
+
+        <!--  Step 2  -->
+        <fieldset class="shadow rounded" id="step2Section">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Personal Statement</h2>
+                <h5 class="fs-subtitle">Step 2</h5>
+            </div>
+            <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
+                <h5>Requirements:</h5>
+                <ul>
+                    <li>Outline why joining our program will help you reach your educational/career goals. This
+                        statement does not have to be lengthy (we suggest 1-2 pages). Without the letter of
+                        interest/personal statement submitted, your application file will be deemed incomplete
+                        and
+                        not reviewed once the committee meets to assess applications.
+                    </li>
+                </ul>
+                <hr>
+                <h5>Submission:</h5>
+
+                <div class="form-group">
+                    <div class="custom-file">
+                        <input type="file" class="form-control custom-file-input" id="personalStatement">
+                        <label class="custom-file-label" for="personalStatement">Upload a file (Word or PDF file) of
+                            your scored personal statement</label>
+                        <div class="invalid-feedback">Error text</div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="button" name="next-step"
+                   class="next-step rounded" value="Next Step"/>
+            <input type="button" name="previous-step"
+                   class="previous-step rounded"
+                   value="Previous Step"/>
+        </fieldset>
+
+
+        <!--  Step 3  -->
+        <fieldset class="shadow rounded" id="step3Section">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Professional Reference Evaluation Form</h2>
+                <h5 class="fs-subtitle">Step 3</h5>
+            </div>
+            <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
+                <h5>Requirements:</h5>
+                <ul class="pl-4">
+                    <li>Have a supervisor, manager, instructor or coach (past or present) evaluate you on your
+                        skills. It must come directly from them, to me, either via email or to my address below.
+                        If this form comes through you, it will be rejected. Once we record the evaluation form
+                    </li>
+
+                    <ul class="pl-4">
+                        <li><b>Option 1: By mail</b></li>
+                        <p>
+                            Jessyka Williams-Faculty<br>
+                            Address: NATRS DEPT AAS<br>
+                            12401 SE 320th St. Mailstop CH<br>
+                            Auburn, WA 98092<br>
+                        </p>
+
+                        <li><b>Option 2: By email</b></li>
+                        <p>
+                            Email to <a
+                                href="mailto:naturalresources@greenriver.edu">naturalresources@greenriver.edu</a>,
+                            subject line "AAS"<br>
+
+                            <b>Note:</b> Submitted applications become the property of Green River
+                            College and materials will not be returned to the applicant.
+                        </p>
+                    </ul>
+
+                    <li>Begin by downloading and printing the following
+                        document: <a title="Professional Reference Evaluation.doc"
+                                     href="../public/assets/external_files/Professional%20Reference%20Evaluation.doc">Professional
+                            Reference Evaluation Form</a>
+                    </li>
+                </ul>
+                <hr>
+                <h5>Submission:</h5>
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="evaluationForm">
+                    <label class="custom-control-label" for="evaluationForm">I have submitted a Professional
+                        Evaluation of Performance form to a previous supervisor, manager, instructor or
+                        coach.</label>
+                </div>
+
+            </div>
+            <input type="button" name="next-step"
+                   class="next-step rounded" value="Next Step"/>
+            <input type="button" name="previous-step"
+                   class="previous-step rounded"
+                   value="Previous Step"/>
+        </fieldset>
+
+        <!--  Step 4  -->
+        <fieldset class="shadow rounded" id="step4Section">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Video, Volunteer Event, or Immersion Event</h2>
+                <h5 class="fs-subtitle">Step 4</h5>
+            </div>
+            <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
+                <h5>Requirements:</h5>
+                <ul class="pl-4">
+                    <li><b>Option 1: Submit a 3-5 min video</b></li>
+                    <ul class="pl-4">
+                        <li>Include video instructions and video upload instructions in a dropdown if they
+                            choose to
+                            do the video option
+                        </li>
+                    </ul>
+                    <li><b>Option 2: Complete a volunteer event within the natural resources field</b></li>
+                    <ul class="pl-4">
+                        <li>You will have to include a 1-3 page write up regarding the event, what you completed
+                            and
+                            what you learned. Please include at least one photo of yourself participating in the
+                            event. (Examples: WTA trail clearing event, stream restoration event with a city or
+                            county entity, volunteering at a fish hatchery, etc.)
+                        </li>
+                    </ul>
+                    <li><b>Option 3: Completion of a GRC NATRS Immersion Event (subject to school approval due
+                        to
+                        COVID-19)</b></li>
+                    <ul class="pl-4">
+                        <li>The Immersion Events consist of a 6 hour on campus Q & A about the
+                            program/history/student resources/student expectations followed by a trail hike
+                            throughout the campus onsite forest or an on-campus work project (invasive species
+                            removal, trail clearing project, wood stacking, hazard tree assessment, etc).
+                        </li>
+                    </ul>
+                </ul>
+                <hr>
+                <h5>Submission:</h5>
+
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>Option 1: Submit a 3-5 min video</option>
+                        <option>Option 2: Complete a volunteer event within the natural resources field</option>
+                        <option>Option 3: Completion of a GRC NATRS Immersion Event (subject to school approval due to
+                            COVID-19)
+                        </option>
+                    </select>
+                </div>
+
+            </div>
+            <input type="button" name="next-step"
+                   class="next-step rounded" value="Next Step"/>
+            <input type="button" name="previous-step"
+                   class="previous-step rounded"
+                   value="Previous Step"/>
+        </fieldset>
+
+        <!--  Step 5  -->
+        <fieldset class="shadow rounded" id="step5Section">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Zoom Meeting</h2>
+                <h5 class="fs-subtitle">Step 5</h5>
+            </div>
+            <div class="form-body pl-5 pr-5 pt-1 pb-2 text-left">
+                <h5>Requirements:</h5>
+                <ul>
+                    <li>Complete one NATRS department Speed Discussion Zoom Meeting event</li>
+                </ul>
+                <hr>
+                <h5>Submission:</h5>
+            </div>
+            <input type="button" name="next-step"
+                   class="next-step rounded" value="Final Step"/>
+            <input type="button" name="previous-step"
+                   class="previous-step rounded"
+                   value="Previous Step"/>
+        </fieldset>
+
+        <!--  Step 6  -->
+        <fieldset class="shadow rounded">
+            <div class="bg-secondary pt-2 pb-2 mb-4 rounded-top">
+                <h2 class="fs-title pl-1 pr-1">Review and Submit</h2>
+                <h5 class="fs-subtitle">Step 6</h5>
+            </div>
+            <div class="finish">
+                <h5 id="submit" class="next-step text-center rounded">
+                    <strong class="text-uppercase">Submit</strong>
+                </h5>
+            </div>
+            <input type="button" name="previous-step"
+                   class="previous-step rounded"
+                   value="Previous Step"/>
+        </fieldset>
+    </form>
