@@ -24,9 +24,18 @@ class Login extends BaseController
 
                 //Get all user information and store in the session
                 $model->getUser($email, $pass);
-
-                //Redirect
-                return redirect()->to(base_url('/profile'));
+                $data = $this->session->get('user');
+                $role = dot_array_search('role', $data);
+                //if user is an admin
+                if ($role == 1) {
+                    //Redirect
+                    return redirect()->to(base_url('/admin'));
+                }
+                //if user is a student
+                else if ($role == 0) {
+                    //Redirect
+                    return redirect()->to(base_url('/profile'));
+                }
             }
         }
 

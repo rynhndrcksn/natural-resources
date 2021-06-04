@@ -11,7 +11,7 @@
         </a>
 
         <!--  Logout  -->
-        <a href="home" class="text-decoration-none text-light">
+        <a href="login" class="text-decoration-none text-light">
             <li class="nav-item logout-button">Logout</li>
         </a>
     </ul>
@@ -49,7 +49,7 @@
         </dl>
         <hr>
         <dl class="row">
-            <dt class="col-4">Intended Field in NATR</dt>
+            <dt class="col-4">Other Interests:</dt>
             <dd class="col-8"><?= esc(ucfirst($program)) ?></dd>
         </dl>
 
