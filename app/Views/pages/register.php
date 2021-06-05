@@ -21,35 +21,34 @@
                 <!--  Header  -->
                 <h3 class="text-center pb-4">Account Registration</h3>
 
-
                 <!--  First  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="fName" name="email" placeholder="Email" value="First name">
+                    <input type="text" class="form-control text-center" id="fName" name="fName" placeholder="First Name">
                 </div>
 
                 <!--  Last  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="lName" name="email" placeholder="Email" value="Last name">
+                    <input type="text" class="form-control text-center" id="lName" name="lName" placeholder="Last Name">
                 </div>
 
                 <!--  Email  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="email" name="email" placeholder="Email" value="Email">
+                    <input type="text" class="form-control text-center" id="email" name="email" placeholder="Email">
                 </div>
 
                 <!--  Student ID  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="sID" name="email" placeholder="Email" value="Student ID">
+                    <input type="text" class="form-control text-center" id="sid" name="sid" placeholder="Student ID">
                 </div>
 
                 <!--  Password  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="pass" name="email" placeholder="Email" value="Password">
+                    <input type="text" class="form-control text-center" id="pass" name="pass" placeholder="Password">
                 </div>
 
                 <!--  Confirm Password  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="cPass" name="email" placeholder="Email" value="Confirm Password">
+                    <input type="text" class="form-control text-center" id="cPass" name="cPass" placeholder="Confirm Password">
                 </div>
 
                 <!--  Submit Button  -->

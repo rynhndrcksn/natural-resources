@@ -39,8 +39,9 @@
 
                 <!--  Password Recovery/Create Account  -->
                 <div class="text-center pt-3">
-                    <p>Need an account? <a class="" href="<?php echo base_url('/register') ?>">Register Here</a></p>
-                    <p><a class="" href="<?php echo base_url('/reset') ?>">Forgot Password?</a></p>
+                    <p><a class="" href="<?php echo base_url('/register') ?>">Create Account</a> | <a class="" href="<?php echo base_url('/reset') ?>">Recover Password</a></p>
+                    <p></p>
+                    <p>Not a Green River College student?<a class="" href="https://www.greenriver.edu/students/online-services/"><br>Get Started Here</a></p>
                 </div>
             </form>
         </div>
