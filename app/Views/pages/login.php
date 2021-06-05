@@ -6,19 +6,20 @@
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" >
+    <link rel="stylesheet" href="../public/assets/styles/styles.css">
 </head>
-<body>
+<body class="forestbackground">
 <!--Beginning of page specific content-->
 
 <div class="container p-5">
 
     <!--  Row  -->
-    <div class="row ">
+    <div class="row">
         <!--  Col  -->
-        <div class="col-10 col-lg-6 col-md-8 col-sm-10 mx-auto p-0 mt-5 mb-5 border rounded-lg">
-            <form class="w-75 mx-auto pt-5 pb-5" method="post" action="#">
+        <div class="col-10 col-lg-6 col-md-8 col-sm-10 mx-auto p-0 mt-5 mb-5 rounded-lg" id="form">
+            <form class="w-75 mx-auto pt-5 pb-5 text-white" method="post" action="#">
                 <!--  Header  -->
-                <h3 class="text-center">Natural Resources</h3>
+                <h2 class="text-center">Natural Resources</h2>
                 <h6 class="text-center">Application Management Portal</h6>
                 <h6 class="text-center pt-4 pb-2">Welcome! Please Log In</h6>
 

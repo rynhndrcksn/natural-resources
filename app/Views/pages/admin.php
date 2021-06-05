@@ -9,6 +9,7 @@
           integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="../public/assets/styles/styles.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
 
     <title>NATRS Dashboard</title>
     <!--Favicon-->
@@ -118,12 +119,11 @@
             <!--Applications Table-->
             <h1 class="font-weight-bold text-center">Applications</h1>
             <br>
-            <div class="table text-center">
+            <div class="table text-center mx-auto">
                 <table id="table" class="display">
                     <thead>
                     <tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
+                        <td>Name</td>
                         <td>Submission Time/Date</td>
                         <td>SID</td>
                         <td>Email</td>
@@ -134,33 +134,17 @@
                     </thead>
 
                     <tbody>
-                    <!--<repeat group="{{ @results }}" value="{{ @result }}">-->
-<!--                    --><?php //foreach ($applicants->result() as $applicant): ?>
-<!--                        <tr>-->
-<!--                            <th>--><?php //echo $applicant->first; ?><!--</th>-->
-<!--                            <td>--><?php //echo $applicant->last; ?><!--</td>-->
-<!--                            <td></td>-->
-<!--                            <td>--><?php //echo $applicant->sid; ?><!--</td>-->
-<!--                            <td>--><?php //echo $applicant->email; ?><!--</td>-->
-<!--                            <td>--><?php //echo $applicant->interests; ?><!--</td>-->
-<!--                            <td><input type="checkbox"></td>-->
-<!--                            <td></td>-->
-<!--                        </tr>-->
-<!--                    --><?php //endforeach; ?>
-
+                    <?php foreach ($applicants->getResult() as $applicant) { ?>
+                        <tr>
+                            <td><?php echo $applicant->first; ?> <?php echo $applicant->last; ?></td>
+                            <td></td>
+                            <td><?php echo $applicant->sid; ?></td>
+                            <td><?php echo $applicant->email; ?></td>
+                            <td><?php echo $applicant->program; ?></td>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                        </tr>
+                    <?php } ?>
                     </tbody>
                 </table>
             </div>
-
-            <!-- FOR JQUERY TABLE -->
-            <!--
-            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-                    crossorigin="anonymous"></script>
-            <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
-            <script>
-                $('#guestbook-table').DataTable({
-                    'scrollX': true,
-                    "order": [[2, "asc"]]
-                });
-            </script>-->

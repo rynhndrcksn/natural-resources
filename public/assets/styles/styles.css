@@ -74,6 +74,20 @@ nav {
     }
 }
 
+/*Login/register/reset Page Styles*/
+.forestbackground {
+    height: 100%;
+    background-image: url(../images/forest.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#form {
+    border: 8px solid black;
+    background-color: #1e621dfa;
+}
+
+
 ul.list-unstyled {
     width: 100%;
 }
@@ -295,8 +309,9 @@ header {
 
 
 /***** Admin Table Styles *****/
-table {
-    width: 100%;
+.table {
+    /*font-family: "Trebuchet MS", Helvetica, sans-serif;*/
+    max-width: 85%;
 }
 
 td, th {
@@ -377,11 +392,12 @@ footer ul li,.taber
         cursor:auto;
     }
     .taber.collapsed:after {
-        content: "+";
+        content: "^";
+        transform: rotate(180deg);
         float: right;
     }
     .taber:after {
-        content: "-";
+        content: "^";
         float: right;
     }
 
