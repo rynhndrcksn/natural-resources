@@ -23,35 +23,51 @@
                 <h3 class="text-center pb-4">Account Registration</h3>
 
                 <!--  First  -->
-                <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="fName" name="fName" placeholder="First Name">
+                <div class="form-group pt-2 col-12">
+									<label for="fName">
+										First Name:
+										<input type="text" class="form-control text-center" id="fName" name="fName" placeholder="First Name">
+									</label>
                 </div>
 
                 <!--  Last  -->
-                <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="lName" name="lName" placeholder="Last Name">
+                <div class="form-group pt-2 col-12">
+									<label for="lName">
+										Last Name:
+										<input type="text" class="form-control text-center" id="lName" name="lName" placeholder="Last Name">
+									</label>
                 </div>
 
                 <!--  Email  -->
-                <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="email" name="email" placeholder="Email">
+                <div class="form-group pt-2 col-12">
+									<label for="email">
+										Email:
+										<input type="text" class="form-control text-center" id="email" name="email" placeholder="Email">
+									</label>
                 </div>
 
                 <!--  Student ID  -->
-                <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="sid" name="sid" placeholder="Student ID">
+                <div class="form-group pt-2 col-12">
+									<label for="sid">
+										Student ID:
+										<input type="text" class="form-control text-center" id="sid" name="sid" placeholder="Student ID">
+									</label>
                 </div>
 
                 <!--  Password  -->
-                <div class="form-group pt-2">
-                    <input type="password" class="form-control text-center" id="pass" name="pass"
-													 placeholder="Password">
+                <div class="form-group pt-2 col-12">
+									<label for="pass">
+										Password:
+										<input type="password" class="form-control text-center" id="pass" name="pass" placeholder="Password">
+									</label>
                 </div>
 
                 <!--  Confirm Password  -->
-                <div class="form-group pt-2">
-                    <input type="password" class="form-control text-center" id="cPass" name="cPass"
-													 placeholder="Confirm Password">
+                <div class="form-group pt-2 col-12">
+									<label for="cPass">
+										Confirm Password:
+										<input type="password" class="form-control text-center" id="cPass" name="cPass" placeholder="Confirm Password">
+									</label>
                 </div>
 
                 <!--  Submit Button  -->
@@ -62,9 +78,10 @@
                 <!--  Terms and Conditions Agreement  -->
                 <div class="text-center pt-3">
                     <h6 class="font-weight-light">By registering an account, you agree to our
-                        <a class="" href="">Terms, Data Policy</a>
-                        and
-                        <a class="" href="">Cookies Policy</a>
+											<a class="" href="">Terms</a>,
+											<a class="" href="">Data Policy</a>,
+											and
+											<a class="" href="">Cookies Policy</a>
                     </h6>
                 </div>
             </form>
