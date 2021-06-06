@@ -38,6 +38,8 @@ $routes->match(['get', 'post'], '/register', 'Register::index');
 $routes->match(['get', 'post'], '/reset', 'Reset::index');
 $routes->match(['get', 'post'], '/portal', 'Student::portal');
 $routes->match(['get', 'post'], '/profile', 'Student::profile');
+$routes->match(['get', 'post'], '/email', 'Email::displayEmail');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

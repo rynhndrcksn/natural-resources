@@ -103,7 +103,7 @@ class Email extends BaseConfig
 	 *
 	 * @var integer
 	 */
-	public $wrapChars = 76;
+	public $wrapChars = 100;
 
 	/**
 	 * Type of mail, either 'text' or 'html'
