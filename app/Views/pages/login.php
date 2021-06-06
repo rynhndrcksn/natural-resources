@@ -25,16 +25,22 @@
 
                 <!--  Username  -->
                 <div class="form-group">
-                    <input type="text" class="form-control text-center" id="user" name="email" placeholder="Email" value="">
+									<label for="user">
+										Email:
+										<input type="text" class="form-control text-center" id="user" name="email" placeholder="Email" value="">
+									</label>
                 </div>
 
                 <!--  Password  -->
-                <div class="form-group pt-2">
-                    <input type="password" class="form-control  text-center" id="pass" name="pass" placeholder="Password">
+                <div class="form-group">
+									<label for="pass">
+										Password:
+										<input type="password" class="form-control  text-center" id="pass" name="pass" placeholder="Password">
+									</label>
                 </div>
 
                 <!--  Submit Button  -->
-                <div class="text-center pt-2">
+                <div class="text-center">
                     <button type="submit" class="btn btn-secondary btn-block">Login</button>
                 </div>
 
