@@ -44,12 +44,14 @@
 
                 <!--  Password  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="pass" name="pass" placeholder="Password">
+                    <input type="password" class="form-control text-center" id="pass" name="pass"
+													 placeholder="Password">
                 </div>
 
                 <!--  Confirm Password  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="cPass" name="cPass" placeholder="Confirm Password">
+                    <input type="password" class="form-control text-center" id="cPass" name="cPass"
+													 placeholder="Confirm Password">
                 </div>
 
                 <!--  Submit Button  -->
