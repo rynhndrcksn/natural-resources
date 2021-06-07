@@ -18,13 +18,14 @@ CREATE TABLE applicant (
 );
 
 CREATE TABLE application (
-    applicationID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    degreeAudit VARCHAR(50),
-    unofficialTranscript VARCHAR(50),
-    personalStatement VARCHAR(50),
-    stepFourOption VARCHAR(50),
-    applicantID INT UNSIGNED NOT NULL,
-    FOREIGN KEY (applicantID) REFERENCES applicant(applicantID)
+     applicationID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+     applicationStatus CHAR(1),
+     degreeAudit VARCHAR(50),
+     unofficialTranscript VARCHAR(50),
+     personalStatement VARCHAR(50),
+     stepFourOption VARCHAR(50),
+     applicantID INT UNSIGNED NOT NULL,
+     FOREIGN KEY (applicantID) REFERENCES applicant(applicantID)
 );
 
 Create TABLE admin (

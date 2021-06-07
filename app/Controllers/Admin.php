@@ -11,7 +11,10 @@ class Admin extends BaseController
         //Instantiate LoginModel
         $model = new AdminModel();
 
-        $data['applicants'] = $model->getApplicants();
+        $data['acceptedApplications'] = $model->getAcceptedApplications();
+        $data['waitListedApplications'] = $model->getWaitListedApplications();
+        $data['rejectedApplications'] = $model->getRejectedApplications();
+        $data['allApplications'] = $model->getAllApplications();
 
         echo view('pages/admin.php', $data);
         echo view('templates/footer');

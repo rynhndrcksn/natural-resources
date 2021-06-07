@@ -74,7 +74,7 @@
 
             <!--  Content  -->
             <div class="container-fluid form-row">
-                <div class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                <div id="acceptedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Accepted</h4>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                <div id="waitlistedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Waitlisted</h4>
@@ -94,7 +94,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                <div id="rejectedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Rejected</h4>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
 
-                <div class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                <div id="allApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">All</h4>
@@ -132,15 +132,56 @@
                         <td>Action</td>
                     </tr>
                     </thead>
-
-                    <tbody>
-                    <?php foreach ($applicants->getResult() as $applicant) { ?>
+                    <tbody id="acceptedApplicationsTable" style="display: none;">
+                    <?php foreach ($acceptedApplications->getResult() as $application) { ?>
                         <tr>
-                            <td><?php echo $applicant->first; ?> <?php echo $applicant->last; ?></td>
+                            <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
                             <td></td>
-                            <td><?php echo $applicant->sid; ?></td>
-                            <td><?php echo $applicant->email; ?></td>
-                            <td><?php echo $applicant->program; ?></td>
+                            <td><?php echo $application->sid; ?></td>
+                            <td><?php echo $application->email; ?></td>
+                            <td><?php echo $application->program; ?></td>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+
+                    <tbody id="waitlistedApplicationsTable" style="display: none;">
+                    <?php foreach ($waitListedApplications->getResult() as $application) { ?>
+                        <tr>
+                            <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
+                            <td></td>
+                            <td><?php echo $application->sid; ?></td>
+                            <td><?php echo $application->email; ?></td>
+                            <td><?php echo $application->program; ?></td>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+
+                    <tbody id="rejectedApplicationsTable" style="display: none;">
+                    <?php foreach ($rejectedApplications->getResult() as $application) { ?>
+                        <tr>
+                            <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
+                            <td></td>
+                            <td><?php echo $application->sid; ?></td>
+                            <td><?php echo $application->email; ?></td>
+                            <td><?php echo $application->program; ?></td>
+                            <td><input type="checkbox"></td>
+                            <td></td>
+                        </tr>
+                    <?php } ?>
+                    </tbody>
+
+                    <tbody id="allApplicationsTable">
+                    <?php foreach ($allApplications->getResult() as $application) { ?>
+                        <tr>
+                            <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
+                            <td></td>
+                            <td><?php echo $application->sid; ?></td>
+                            <td><?php echo $application->email; ?></td>
+                            <td><?php echo $application->program; ?></td>
                             <td><input type="checkbox"></td>
                             <td></td>
                         </tr>

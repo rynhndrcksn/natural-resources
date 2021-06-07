@@ -115,6 +115,7 @@
         crossorigin="anonymous"></script>
 <script src="../public/assets/scripts/application.js"></script>
 <script src="../public/assets/scripts/navbar_and_footer.js"></script>
+<script src="../public/assets/scripts/admin.js"></script>
 
 <script src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
 <script>
