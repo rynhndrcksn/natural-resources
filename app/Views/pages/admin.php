@@ -79,7 +79,9 @@
                         <div class="card-body">
                             <h4 class="text-center">Accepted</h4>
                             <hr>
-                            <h2 class="text-center"><strong>10</strong></h2>
+                            <h2 class="text-center"><strong>
+                                    <?php echo $acceptedApplicationCount ? $acceptedApplicationCount : 0?>
+                            </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,9 @@
                         <div class="card-body">
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
-                            <h2 class="text-center"><strong>2</strong></h2>
+                            <h2 class="text-center"><strong>
+                                    <?php echo $waitlistedApplicationCount ? $waitlistedApplicationCount : 0?>
+                            </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -99,7 +103,9 @@
                         <div class="card-body">
                             <h4 class="text-center">Rejected</h4>
                             <hr>
-                            <h2 class="text-center"><strong>0</strong></h2>
+                            <h2 class="text-center"><strong>
+                                    <?php echo $rejectedApplicationCount ? $rejectedApplicationCount : 0?>
+                            </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -109,8 +115,9 @@
                         <div class="card-body">
                             <h4 class="text-center">All</h4>
                             <hr>
-                            <h2 class="text-center"><strong>12</strong></h2>
-
+                            <h2 class="text-center"><strong>
+                                    <?php echo $allApplicationCount ? $allApplicationCount : 0?>
+                            </strong></h2>
                         </div>
                     </div>
                 </div>

@@ -11,6 +11,11 @@ class Admin extends BaseController
         //Instantiate LoginModel
         $model = new AdminModel();
 
+        $data['acceptedApplicationCount'] = $model->getAcceptedApplicationCount();
+        $data['waitListedApplications'] = $model->getWaitlistedApplicationCount();
+        $data['rejectedApplications'] = $model->getRejectedApplicationCount();
+        $data['allApplicationCount'] = $model->getAllApplicationCount();
+
         $data['acceptedApplications'] = $model->getAcceptedApplications();
         $data['waitListedApplications'] = $model->getWaitListedApplications();
         $data['rejectedApplications'] = $model->getRejectedApplications();
