@@ -13,7 +13,7 @@ class Login extends BaseController
         $data = [];
         $data['title'] = 'Login';
 
-
+        //TODO: Need to add error message for email not found
         helper(['form']);
         $rules = [
             'email' => [
@@ -30,7 +30,6 @@ class Login extends BaseController
                 ]
             ]
         ];
-
 
         //If request method == POST
         if ($this->request->getMethod() === 'post') {
@@ -65,10 +64,10 @@ class Login extends BaseController
                     }
                 }
             }
+
             //Email and pass not valid
-            else{
-                $data['validation'] = $this->validator;
-            }
+            $data['validation'] = $this->validator;
+
         }
 
         return view('pages/login.php', $data);

@@ -20,7 +20,7 @@ class RegisterModel extends Model
         $results = $db->query($sql, [
             'email' => $email
         ]);
-        $results = $results->getResultArray()[0];
+        $results = $results->getResultArray();
 
         return empty($results);
     }

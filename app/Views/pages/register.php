@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Account Registration</title>
+    <title><?= $title ?></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" >
     <link rel="stylesheet" href="../public/assets/styles/styles.css">
@@ -25,37 +25,59 @@
                 <!--  First  -->
                 <div class="form-group pt-2 col-12">
                     <label for="fName">First Name</label>
-                    <input type="text" class="form-control text-center" id="fName" name="fName" >
+                    <input type="text" class="form-control" id="fName" name="fName"
+                           value="<?= set_value('fName') ?>">
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('fName') ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Last  -->
                 <div class="form-group pt-2 col-12">
                     <label for="lName">Last Name</label>
-                    <input type="text" class="form-control text-center" id="lName" name="lName" >
+                    <input type="text" class="form-control" id="lName" name="lName"
+                           value="<?= set_value('lName') ?>">
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('lName') ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Email  -->
                 <div class="form-group pt-2 col-12">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control text-center" id="email" name="email" >
+                    <input type="text" class="form-control" id="email" name="email"
+                           value="<?= set_value('email') ?>">
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('email') ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Student ID  -->
                 <div class="form-group pt-2 col-12">
                     <label for="sid">Student ID</label>
-                    <input type="text" class="form-control text-center" id="sid" name="sid" >
+                    <input type="text" class="form-control" id="sid" name="sid"
+                           value="<?= set_value('sid') ?>">
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('sid') ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Password  -->
                 <div class="form-group pt-2 col-12">
                     <label for="pass">Password</label>
-                    <input type="password" class="form-control text-center" id="pass" name="pass" >
+                    <input type="password" class="form-control" id="pass" name="pass" >
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('pass') ?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Confirm Password  -->
                 <div class="form-group pt-2 col-12">
                     <label for="cPass">Confirm Password</label>
-                    <input type="password" class="form-control text-center" id="cPass" name="cPass">
+                    <input type="password" class="form-control" id="cPass" name="cPass">
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('cPass') ?></div>
+                    <?php endif; ?>
                 </div>
                 <br>
 
