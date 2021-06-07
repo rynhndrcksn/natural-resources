@@ -25,43 +25,48 @@
                 <!--  First  -->
                 <div class="form-group pt-2 col-12">
                     <label for="fName">First Name</label>
-                    <input type="text" class="form-control text-center" id="fName" name="fName" placeholder="First Name">
+                    <input type="text" class="form-control text-center" id="fName" name="fName" >
                 </div>
 
                 <!--  Last  -->
                 <div class="form-group pt-2 col-12">
                     <label for="lName">Last Name</label>
-                    <input type="text" class="form-control text-center" id="lName" name="lName" placeholder="Last Name">
+                    <input type="text" class="form-control text-center" id="lName" name="lName" >
                 </div>
 
                 <!--  Email  -->
                 <div class="form-group pt-2 col-12">
                     <label for="email">Email</label>
-                    <input type="text" class="form-control text-center" id="email" name="email" placeholder="Email">
+                    <input type="text" class="form-control text-center" id="email" name="email" >
                 </div>
 
                 <!--  Student ID  -->
                 <div class="form-group pt-2 col-12">
                     <label for="sid">Student ID</label>
-                    <input type="text" class="form-control text-center" id="sid" name="sid" placeholder="Student ID">
+                    <input type="text" class="form-control text-center" id="sid" name="sid" >
                 </div>
 
                 <!--  Password  -->
                 <div class="form-group pt-2 col-12">
                     <label for="pass">Password</label>
-                    <input type="password" class="form-control text-center" id="pass" name="pass" placeholder="Password">
+                    <input type="password" class="form-control text-center" id="pass" name="pass" >
                 </div>
 
                 <!--  Confirm Password  -->
                 <div class="form-group pt-2 col-12">
                     <label for="cPass">Confirm Password</label>
-                    <input type="password" class="form-control text-center" id="cPass" name="cPass" placeholder="Confirm Password">
+                    <input type="password" class="form-control text-center" id="cPass" name="cPass">
                 </div>
                 <br>
 
                 <!--  Submit Button  -->
                 <div class="text-center pt-2">
                     <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+                </div>
+
+                <!--  Back to Login  -->
+                <div class="text-center pt-3">
+                    <p><a class="" href="<?php echo base_url('/') ?>">Back to Login</a></p>
                 </div>
 
                 <!--  Terms and Conditions Agreement  -->

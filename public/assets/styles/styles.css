@@ -76,17 +76,16 @@ nav {
 
 /*Login/register/reset Page Styles*/
 .forestbackground {
-    height: 100%;
-    background-image: url(../images/forest.jpg);
+    height: 100vh;
+    background-image: url(../images/forestblur.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 #starterForm {
     border: 8px solid black;
-    background-color: #1e621dfa;
+    background-color: #10580fdb;
 }
-
 
 ul.list-unstyled {
     width: 100%;

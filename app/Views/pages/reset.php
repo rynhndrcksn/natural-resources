@@ -27,12 +27,17 @@
 
                 <!--  Username  -->
                 <div class="form-group pt-2">
-                    <input type="text" class="form-control text-center" id="user" name="email" placeholder="Email" value="">
+                    <input type="text" class="form-control text-center" id="user" name="email" value="">
                 </div>
 
                 <!--  Submit Button  -->
                 <div class="text-center pt-2">
                     <button type="submit" class="btn btn-secondary btn-block">Send Password Reset</button>
+                </div>
+
+                <!--  Back to Login  -->
+                <div class="text-center pt-3">
+                    <p><a class="" href="<?php echo base_url('/') ?>">Back to Login</a></p>
                 </div>
 
             </form>

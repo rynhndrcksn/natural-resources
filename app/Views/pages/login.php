@@ -26,13 +26,13 @@
                 <!--  Username  -->
                 <div class="form-group">
                     <label for="user">Email</label>
-                    <input type="text" class="form-control text-center" id="user" name="email" placeholder="Email" value="">
+                    <input type="text" class="form-control text-center" id="user" name="email" value="">
                 </div>
 
                 <!--  Password  -->
                 <div class="form-group">
                     <label for="pass">Password</label>
-                    <input type="password" class="form-control text-center" id="pass" name="pass" placeholder="Password">
+                    <input type="password" class="form-control text-center" id="pass" name="pass">
                 </div>
                 <br>
 
