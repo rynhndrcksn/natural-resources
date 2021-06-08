@@ -1,76 +1,53 @@
-$(document).ready(function () {
-    $("acceptedApplications").click(function () {
-        $("acceptedApplicationsTable").css( {
-            'display': 'block'
-        });
+document.getElementById("rejectedApplications").onclick = rejectedApplications;
+document.getElementById("waitlistedApplications").onclick = waitlistedApplications;
+document.getElementById("allApplications").onclick = allApplications;
+document.getElementById("acceptedApplications").onclick = acceptedApplications;
 
-        $("waitlistedApplicationsTable").css( {
-            'display': 'none'
-        })
 
-        $("rejectedApplicationsTable").css( {
-            'display': 'none'
-        })
+//This function will show rejected apps table and hide the others
+function rejectedApplications() {
+    let all = document.getElementById("allApplicationsTable");
+    let waitlisted = document.getElementById("waitlistedApplicationsTable");
+    let rejected = document.getElementById("rejectedApplicationsTable");
+    let accepted = document.getElementById("acceptedApplicationsTable");
+    rejected.classList.remove("d-none");
+    waitlisted.classList.add("d-none");
+    accepted.classList.add("d-none");
+    all.classList.add("d-none");
+}
 
-        $("allApplicationsTable").css( {
-            'display': 'none'
-        })
+//This function will show waitlisted apps table and hide the others
+function waitlistedApplications() {
+    let all = document.getElementById("allApplicationsTable");
+    let waitlisted = document.getElementById("waitlistedApplicationsTable");
+    let rejected = document.getElementById("rejectedApplicationsTable");
+    let accepted = document.getElementById("acceptedApplicationsTable");
+    rejected.classList.add("d-none");
+    waitlisted.classList.remove("d-none");
+    accepted.classList.add("d-none");
+    all.classList.add("d-none");
+}
 
-        alert("Clicked");
-    })
+//This function will show all apps table and hide the others
+function allApplications() {
+    let all = document.getElementById("allApplicationsTable");
+    let waitlisted = document.getElementById("waitlistedApplicationsTable");
+    let rejected = document.getElementById("rejectedApplicationsTable");
+    let accepted = document.getElementById("acceptedApplicationsTable");
+    rejected.classList.add("d-none");
+    waitlisted.classList.add("d-none");
+    accepted.classList.add("d-none");
+    all.classList.remove("d-none");
+}
 
-    $("waitlistedApplications").click(function () {
-        $("waitlistedApplicationsTable").css( {
-            'display': 'block'
-        });
-
-        $("acceptedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("rejectedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("allApplicationsTable").css( {
-            'display': 'none'
-        })
-    })
-
-    $("rejectedApplications").click(function () {
-        $("rejectedApplicationsTable").css( {
-            'display': 'block'
-        });
-
-        $("waitlistedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("acceptedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("allApplicationsTable").css( {
-            'display': 'none'
-        })
-    })
-
-    $("allApplications").click(function () {
-        $("allApplicationsTable").css( {
-            'display': 'block'
-        });
-
-        $("waitlistedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("rejectedApplicationsTable").css( {
-            'display': 'none'
-        })
-
-        $("acceptedApplicationsTable").css( {
-            'display': 'none'
-        })
-    })
-});
-
+//This function will show accepted apps table and hide the others
+function acceptedApplications() {
+    let all = document.getElementById("allApplicationsTable");
+    let waitlisted = document.getElementById("waitlistedApplicationsTable");
+    let rejected = document.getElementById("rejectedApplicationsTable");
+    let accepted = document.getElementById("acceptedApplicationsTable");
+    rejected.classList.add("d-none");
+    waitlisted.classList.add("d-none");
+    accepted.classList.remove("d-none");
+    all.classList.add("d-none");
+}

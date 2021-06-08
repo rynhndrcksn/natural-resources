@@ -81,7 +81,7 @@
                             <hr>
                             <h2 class="text-center"><strong>
                                     <?php echo $acceptedApplicationCount ? $acceptedApplicationCount : 0?>
-                            </strong></h2>
+                                </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@
                             <hr>
                             <h2 class="text-center"><strong>
                                     <?php echo $waitlistedApplicationCount ? $waitlistedApplicationCount : 0?>
-                            </strong></h2>
+                                </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                             <hr>
                             <h2 class="text-center"><strong>
                                     <?php echo $rejectedApplicationCount ? $rejectedApplicationCount : 0?>
-                            </strong></h2>
+                                </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                             <hr>
                             <h2 class="text-center"><strong>
                                     <?php echo $allApplicationCount ? $allApplicationCount : 0?>
-                            </strong></h2>
+                                </strong></h2>
                         </div>
                     </div>
                 </div>
@@ -139,7 +139,7 @@
                         <td>Action</td>
                     </tr>
                     </thead>
-                    <tbody id="acceptedApplicationsTable" style="display: none;">
+                    <tbody id="acceptedApplicationsTable" class="d-none">
                     <?php foreach ($acceptedApplications->getResult() as $application) { ?>
                         <tr>
                             <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
@@ -153,7 +153,7 @@
                     <?php } ?>
                     </tbody>
 
-                    <tbody id="waitlistedApplicationsTable" style="display: none;">
+                    <tbody id="waitlistedApplicationsTable" class="d-none">
                     <?php foreach ($waitListedApplications->getResult() as $application) { ?>
                         <tr>
                             <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
@@ -167,7 +167,7 @@
                     <?php } ?>
                     </tbody>
 
-                    <tbody id="rejectedApplicationsTable" style="display: none;">
+                    <tbody id="rejectedApplicationsTable" class="d-none">
                     <?php foreach ($rejectedApplications->getResult() as $application) { ?>
                         <tr>
                             <td><?php echo $application->first; ?> <?php echo $application->last; ?></td>
