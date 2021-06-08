@@ -73,9 +73,12 @@
             </header>
 
             <!--  Content  -->
+            <h1 class="font-weight-bold text-center">Applications</h1>
+            <hr>
+            <br>
             <div class="container-fluid form-row">
                 <div id="acceptedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div class="card bg-white shadow">
+                    <div id="accepted" class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Accepted</h4>
                             <hr>
@@ -87,7 +90,7 @@
                 </div>
 
                 <div id="waitlistedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div class="card bg-white shadow">
+                    <div id="waitlisted" class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
@@ -100,7 +103,7 @@
 
                 <div id="rejectedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div class="card bg-white shadow">
-                        <div class="card-body">
+                        <div id="rejected" class="card-body">
                             <h4 class="text-center">Rejected</h4>
                             <hr>
                             <h2 class="text-center"><strong>
@@ -111,7 +114,7 @@
                 </div>
 
                 <div id="allApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div class="card bg-white shadow">
+                    <div id="all" class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">All</h4>
                             <hr>
@@ -122,10 +125,10 @@
                     </div>
                 </div>
             </div>
+            <h6 class="text-center">*Click On One of the Filters Above to Display in the Table</h6>
+            <br><br>
 
             <!--Applications Table-->
-            <h1 class="font-weight-bold text-center">Applications</h1>
-            <br>
             <div class="table text-center mx-auto">
                 <table id="table" class="display">
                     <thead>

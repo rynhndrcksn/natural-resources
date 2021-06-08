@@ -319,6 +319,17 @@ td, th {
     padding: 8px;
 }
 
+#accepted:hover, #all:hover {
+    background-color: #2f8d46ed!important;
+}
+
+#rejected:hover {
+    background-color: #b00000ba!important;
+}
+
+#waitlisted:hover {
+    background-color: #eeb304c2!important;
+}
 
 /***** Footer Styles *****/
 footer {
