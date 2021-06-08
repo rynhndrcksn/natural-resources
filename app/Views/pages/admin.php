@@ -83,7 +83,7 @@
                             <h4 class="text-center">Accepted</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo $acceptedApplicationCount ? $acceptedApplicationCount : 0?>
+                                    <?php echo isset($acceptedApplicationCount) ? $acceptedApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo $waitlistedApplicationCount ? $waitlistedApplicationCount : 0?>
+                                    <?php echo isset($waitlistedApplicationCount) ? $waitlistedApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                             <h4 class="text-center">Rejected</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo $rejectedApplicationCount ? $rejectedApplicationCount : 0?>
+                                    <?php echo isset($rejectedApplicationCount) ? $rejectedApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                             <h4 class="text-center">All</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo $allApplicationCount ? $allApplicationCount : 0?>
+                                    <?php echo isset($allApplicationCount) ? $allApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>

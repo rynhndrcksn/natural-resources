@@ -331,6 +331,12 @@ td, th {
     background-color: #eeb304c2!important;
 }
 
+.dataTables_scrollHeadInner {
+    margin-left: auto;!important;
+    margin-right: auto;!important;
+}
+
+
 /***** Footer Styles *****/
 footer {
     margin-top: 0;
