@@ -95,7 +95,7 @@
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo isset($waitlistedApplicationCount) ? $waitlistedApplicationCount : 0?>
+                                    <?php echo isset($waitListedApplicationCount) ? $waitListedApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>

@@ -10,22 +10,16 @@ CREATE TABLE account(
     PRIMARY KEY (accountID)
 );
 
-CREATE TABLE applicant (
-    applicantID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-    studentID INT UNSIGNED NOT NULL,
+CREATE TABLE application (
+    applicationID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
+    applicationStatus CHAR(1),
+    degreeAudit VARCHAR(50),
+    unofficialTranscript VARCHAR(50),
+    personalStatement VARCHAR(50),
+    evaluationForm TINYINT,
+    submissionTime DATETIME,
     accountID INT UNSIGNED NOT NULL,
     FOREIGN KEY (accountID) REFERENCES account(accountID)
-);
-
-CREATE TABLE application (
-     applicationID INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,
-     applicationStatus CHAR(1),
-     degreeAudit VARCHAR(50),
-     unofficialTranscript VARCHAR(50),
-     personalStatement VARCHAR(50),
-     stepFourOption VARCHAR(50),
-     applicantID INT UNSIGNED NOT NULL,
-     FOREIGN KEY (applicantID) REFERENCES applicant(applicantID)
 );
 
 Create TABLE admin (

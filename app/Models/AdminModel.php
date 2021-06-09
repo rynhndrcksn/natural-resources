@@ -13,9 +13,9 @@ class AdminModel extends Model
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT * FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus:";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -26,13 +26,13 @@ class AdminModel extends Model
         return $results->getNumRows();
     }
 
-    function getWaitlistedApplicationCount()
+    function getWaitListedApplicationCount()
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT account.* FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus: ORDER BY account.accountID DESC";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -47,9 +47,9 @@ class AdminModel extends Model
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT account.* FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus: ORDER BY account.accountID DESC";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -93,9 +93,9 @@ class AdminModel extends Model
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT account.* FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus: ORDER BY account.accountID DESC";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -110,9 +110,9 @@ class AdminModel extends Model
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT account.* FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus: ORDER BY account.accountID DESC";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -127,9 +127,9 @@ class AdminModel extends Model
     {
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "SELECT account.* FROM account, application, applicant WHERE account.accountID = applicant.accountID AND 
-                    applicant.applicantID = application.applicantID AND account.role = :role: AND 
-                    application.applicationStatus = :applicationStatus: ORDER BY account.accountID DESC";
+        $sql = "SELECT account.* FROM account, application WHERE account.accountID = application.accountID AND 
+                    account.role = :role: AND application.applicationStatus = :applicationStatus: ORDER BY 
+                    account.accountID DESC";
 
         //Send query then store the results
         $results = $db->query($sql, [

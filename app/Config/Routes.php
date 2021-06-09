@@ -9,7 +9,7 @@ $routes = Services::routes();
 // can override as needed.
 if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
 {
-	require SYSTEMPATH . 'Config/Routes.php';
+    require SYSTEMPATH . 'Config/Routes.php';
 }
 
 /**
@@ -36,7 +36,7 @@ $routes->setAutoRoute(true);
 $routes->match(['get', 'post'], '/', 'Login::index');
 $routes->match(['get', 'post'], '/register', 'Register::index');
 $routes->match(['get', 'post'], '/reset', 'Reset::index');
-$routes->match(['get', 'post'], '/portal', 'Student::portal');
+$routes->match(['get', 'post'], '/portal', 'Application::index');
 $routes->match(['get', 'post'], '/profile', 'Student::profile');
 $routes->match(['get', 'post'], '/email', 'Email::displayEmail');
 
@@ -55,5 +55,5 @@ $routes->match(['get', 'post'], '/email', 'Email::displayEmail');
  */
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php'))
 {
-	require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
 }

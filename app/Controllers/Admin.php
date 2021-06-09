@@ -6,14 +6,14 @@ use App\Models\AdminModel;
 
 class Admin extends BaseController
 {
-	public function index()
-	{
+    public function index()
+    {
         //Instantiate LoginModel
         $model = new AdminModel();
 
         $data['acceptedApplicationCount'] = $model->getAcceptedApplicationCount();
-        $data['waitListedApplications'] = $model->getWaitlistedApplicationCount();
-        $data['rejectedApplications'] = $model->getRejectedApplicationCount();
+        $data['waitListedApplicationCount'] = $model->getWaitListedApplicationCount();
+        $data['rejectedApplicationCount'] = $model->getRejectedApplicationCount();
         $data['allApplicationCount'] = $model->getAllApplicationCount();
 
         $data['acceptedApplications'] = $model->getAcceptedApplications();
