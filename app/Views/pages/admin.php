@@ -77,6 +77,19 @@
             <hr>
             <br>
             <div class="container-fluid form-row">
+
+                <div id="allApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                    <div id="all" class="card bg-white shadow">
+                        <div class="card-body">
+                            <h4 class="text-center">All</h4>
+                            <hr>
+                            <h2 class="text-center"><strong>
+                                    <?php echo isset($allApplicationCount) ? $allApplicationCount : 0?>
+                                </strong></h2>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="acceptedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div id="accepted" class="card bg-white shadow">
                         <div class="card-body">
@@ -108,18 +121,6 @@
                             <hr>
                             <h2 class="text-center"><strong>
                                     <?php echo isset($rejectedApplicationCount) ? $rejectedApplicationCount : 0?>
-                                </strong></h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="allApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div id="all" class="card bg-white shadow">
-                        <div class="card-body">
-                            <h4 class="text-center">All</h4>
-                            <hr>
-                            <h2 class="text-center"><strong>
-                                    <?php echo isset($allApplicationCount) ? $allApplicationCount : 0?>
                                 </strong></h2>
                         </div>
                     </div>

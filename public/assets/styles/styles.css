@@ -319,8 +319,12 @@ td, th {
     padding: 8px;
 }
 
-#accepted:hover, #all:hover {
+#accepted:hover {
     background-color: #2f8d46ed!important;
+}
+
+#all:hover {
+    background-color: #42b5adc2!important;
 }
 
 #rejected:hover {
