@@ -23,7 +23,7 @@
                 <h3 class="text-center pb-4">Account Registration</h3>
 
                 <!--  First  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12 p-0">
                     <label for="fName">First Name</label>
                     <input type="text" class="form-control" id="fName" name="fName"
                            value="<?= set_value('fName') ?>">
@@ -33,7 +33,7 @@
                 </div>
 
                 <!--  Last  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12 p-0">
                     <label for="lName">Last Name</label>
                     <input type="text" class="form-control" id="lName" name="lName"
                            value="<?= set_value('lName') ?>">
@@ -43,7 +43,7 @@
                 </div>
 
                 <!--  Email  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12 p-0">
                     <label for="email">Email</label>
                     <input type="text" class="form-control" id="email" name="email"
                            value="<?= set_value('email') ?>">
@@ -53,7 +53,7 @@
                 </div>
 
                 <!--  Student ID  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12  p-0">
                     <label for="sid">Student ID</label>
                     <input type="text" class="form-control" id="sid" name="sid"
                            value="<?= set_value('sid') ?>">
@@ -62,17 +62,43 @@
                     <?php endif; ?>
                 </div>
 
+                <!--  Degree Path Options  -->
+                <div class="form-group mb-3 p-0">
+                    <label for="degreeOptions">Degree Path</label>
+                    <select class="custom-select" name="degreeOptions" id="degreeOptions">
+                        <option selected>Choose...</option>
+                        <?php foreach($degreeOptions as $degreeOption) :?>
+                            <option <?= set_select('degreeOptions', $degreeOption) ?>value="<?= $degreeOption ?>"><?= $degreeOption ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                    <?php if(isset($validation)) :?>
+                        <div class="text-danger"><?= $validation->getError('degreeOptions') ?></div>
+                    <?php endif; ?>
+                </div>
+
+                <!--  Program Options  -->
+                <div class="form-group mb-3 p-0">
+                    <label for="programOptions">Program Options</label>
+                    <select class="custom-select" id="programOptions">
+                        <option selected>Choose...</option>
+                        <?php foreach($programOptions as $programOption) :?>
+                            <option value="<?= $programOption ?>"><?= $programOption ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </div>
+
                 <!--  Password  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12 p-0">
                     <label for="pass">Password</label>
                     <input type="password" class="form-control" id="pass" name="pass" >
                     <?php if(isset($validation)) :?>
                         <div class="text-danger"><?= $validation->getError('pass') ?></div>
                     <?php endif; ?>
+
                 </div>
 
                 <!--  Confirm Password  -->
-                <div class="form-group pt-2 col-12">
+                <div class="form-group col-12 p-0">
                     <label for="cPass">Confirm Password</label>
                     <input type="password" class="form-control" id="cPass" name="cPass">
                     <?php if(isset($validation)) :?>

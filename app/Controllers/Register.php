@@ -11,8 +11,28 @@ class Register extends BaseController
         $data = [];
         $data['title'] = 'Create Account';
 
+        $data['degreeOptions'] = [
+            'Natural Resources Forestry A.A.S.',
+            'Natural Resources A-PP (for transfer students)'
+        ];
+
+        $data['programOptions'] = [
+            'Wildland Fire',
+            'GIS',
+            'Water Quality',
+            'Park Management'
+        ];
+
         helper(['form']);
         $rules = [
+            'degreeOptions' => [
+                'rules' => 'required|in_list[Natural Resources Forestry A.A.S., Natural Resources A-PP (for transfer students)]',
+                'errors' => [
+                    'required' => 'Please choose a degree path',
+                    'in_list' => 'Please choose a degree path'
+                ]
+            ],
+
             'fName' => [
                 'rules' => 'required|alpha',
                 'errors' => [
