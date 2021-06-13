@@ -7,8 +7,9 @@
         public function displayEmail() {
             $data = session('user');
             $firstName = session('user')['first'];
+            $toEmail = session('user')['email'];
 
-            $to = "allavore@mail.greenriver.edu";
+            $to = $toEmail;
             $subject = "Application Successfully Submitted";
             $message = "Hello " . $firstName  . ", \n\n" .
                         "Your application was successfully submitted for Green River's Associate of Applied Science: Forestry, Park Management, Water Quality, Wildland Fire, GIS and APP for Natural Resources Program. Please prepare for a speed interview on __/__/____ and we will see you then! \n\n" .

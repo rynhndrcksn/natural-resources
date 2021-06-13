@@ -78,13 +78,15 @@
             <div id="collapsethree" class="panel-collapse collapse in pt-2" role="tabpanel">
                 <hr class="background-white">
                 <ul>
+                    <li>Jessyka Williams (Natural Resources Program Coordinator):</li>
                     <li>
-                        <a class="hyperlink-removed" href="mailto:MPriebe@greenriver.edu">Dr. Monica Paulson
-                            Priebe</a>
+                        <a class="hyperlink-removed font-italic" href="mailto:jrwilliams@greenriver.edu">
+                            jrwilliams@greenriver.edu
+                        </a>
                     </li>
-                    <li>Natural Resources Faculty
-                        253-833-9111, ext. 4509
-                    </li>
+                    <li>
+                        <a class="hyperlink-removed font-italic" href="tel:253-931-6925">253-931-6925
+                        </a></li>
                 </ul>
             </div>
         </div>

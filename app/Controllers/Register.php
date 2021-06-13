@@ -17,6 +17,7 @@ class Register extends BaseController
         ];
 
         $data['programOptions'] = [
+            'Forestry',
             'Wildland Fire',
             'GIS',
             'Water Quality',
@@ -34,17 +35,17 @@ class Register extends BaseController
             ],
 
             'fName' => [
-                'rules' => 'required|alpha',
+                'rules' => 'required|alpha_space',
                 'errors' => [
                     'required' => 'Enter your first name',
-                    'alpha' => 'Enter only alphabetical letters'
+                    'alpha_space' => 'Enter only alphabetical letters'
                 ]
             ],
             'lName' => [
-                'rules' => 'required|alpha',
+                'rules' => 'required|alpha_space',
                 'errors' => [
                     'required' => 'Enter your last name',
-                    'alpha' => 'Enter only alphabetical letters'
+                    'alpha_space' => 'Enter only alphabetical letters'
                 ]
             ],
             'email' => [
