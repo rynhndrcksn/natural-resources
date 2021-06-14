@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="../public/assets/styles/styles.css">
 
     <!--Favicon-->
@@ -30,9 +31,12 @@
                 <div class="form-group">
                     <label for="user">Email</label>
                     <input type="text" class="form-control" id="user" name="email"
-                           value="<?= set_value('email')?>">
-                    <?php if(isset($validation)) : ?>
+                           value="<?= set_value('email') ?>">
+                    <?php if (isset($validation)) : ?>
                         <div class="text-danger"><?= $validation->getError('email') ?></div>
+                    <?php endif; ?>
+                    <?php if (isset($validateEmail)) : ?>
+                        <div class="text-danger"><?= $validateEmail ?></div>
                     <?php endif; ?>
                 </div>
 
@@ -40,8 +44,13 @@
                 <div class="form-group">
                     <label for="pass">Password</label>
                     <input type="password" class="form-control" id="pass" name="pass">
-                    <?php if(isset($validation)) : ?>
+                    <?php if (isset($validation)) : ?>
                         <div class="text-danger"><?= $validation->getError('pass') ?></div>
+                    <?php endif; ?>
+                    <?php if (isset($validatePass)) : ?>
+                        <div class="text-danger"><?= $validatePass ?> <a class="text-danger font-weight-bold"
+                                                                         href="<?php echo base_url('/reset') ?>">Recover
+                                Password</a></div>
                     <?php endif; ?>
                 </div>
                 <br>
@@ -53,9 +62,13 @@
 
                 <!--  Password Recovery/Create Account  -->
                 <div class="text-center pt-3">
-                    <p><a class="" href="<?php echo base_url('/register') ?>">Create Account</a> | <a class="" href="<?php echo base_url('/reset') ?>">Recover Password</a></p>
+                    <p><a class="" href="<?php echo base_url('/register') ?>">Create Account</a> | <a class=""
+                                                                                                      href="<?php echo base_url('/reset') ?>">Recover
+                            Password</a></p>
                     <p></p>
-                    <p>Not a Green River College student?<a class="" href="https://www.greenriver.edu/students/online-services/"><br>Get Started Here</a></p>
+                    <p>Not a Green River College student?<a class=""
+                                                            href="https://www.greenriver.edu/students/online-services/"><br>Get
+                            Started Here</a></p>
                 </div>
             </form>
         </div>
@@ -65,8 +78,14 @@
 
 <!--End of page specific content-->
 <!--   SCRIPTS   -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 </html>

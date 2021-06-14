@@ -13,7 +13,6 @@ class Login extends BaseController
         $data = [];
         $data['title'] = 'Login';
 
-        //TODO: Need to add error message for email not found
         helper(['form']);
         $rules = [
             'email' => [
@@ -61,6 +60,17 @@ class Login extends BaseController
                     else if ($role == 0) {
                         //Redirect
                         return redirect()->to(base_url('/profile'));
+                    }
+                }
+                else {
+                    //if email is invalid
+                    if(!$model->emailExists($email)) {
+                        $data['validateEmail'] = 'The email you entered does not belong to any account';
+                    }
+                    //if pass for valid email is invalid
+                    else if($model->emailExists($email) && !$model->isUser($email, $pass)) {
+                        $data['validatePass'] = 'The password you entered is incorrect. 
+                        Try again or ';
                     }
                 }
             }

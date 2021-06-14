@@ -5,7 +5,8 @@ CREATE TABLE account(
     first VARCHAR(20) NOT NULL,
     last VARCHAR(50) NOT NULL,
     sid INT UNSIGNED NOT NULL,
-    program varchar(50) NOT NULL,
+    degreePath varchar(50) NOT NULL,
+    programOptions varchar(100),
     role TINYINT(1) NOT NULL,
     PRIMARY KEY (accountID)
 );

@@ -82,17 +82,25 @@ class Register extends BaseController
         ];
 
         //If POST request
-        if($this->request->getMethod() === 'post'){
+        if ($this->request->getMethod() === 'post') {
 
             //Validate input fields
-            if($this->validate($rules)){
+            if ($this->validate($rules)) {
 
                 //Create Register model
                 $model = new RegisterModel();
 
                 //TODO: Add error from checkAvail to validation rules
                 //If email is not in use
-                if($model->checkAvail($this->request->getPost('email'))){
+                if ($model->checkAvail($this->request->getPost('email'))) {
+
+                    //get program options
+                    $programOptions = $this->request->getPost('programOptions');
+                    if (isset($programOptions)) {
+                        $programOptions = implode(", ", $programOptions);
+                    } else {
+                        $programOptions = 'Forestry';
+                    }
 
                     //Send user info to Register model to add to database
                     $newUser = [
@@ -101,7 +109,8 @@ class Register extends BaseController
                         'email' => $this->request->getPost('email'),
                         'sid' => $this->request->getPost('sid'),
                         'pass' => $this->request->getPost('pass'),
-                        'program' => 'Forestry',
+                        'degreePath' => $this->request->getPost('degreeOptions'),
+                        'programOptions' => $programOptions,
                         'role' => 0
                     ];
 
@@ -109,12 +118,13 @@ class Register extends BaseController
 
                     //TODO: add either an intermediate page or delay, show user registration was successful
                     //Verify addUser was successful redirect back to login
-                    if(!$model->checkAvail($newUser['email'])){
+                    if (!$model->checkAvail($newUser['email'])) {
                         return redirect()->to(base_url('/login'));
                     }
+                } else {
+                    $data['validateEmail'] = 'Account with this email already exists';
                 }
-            }
-            else {
+            } else {
                 $data['validation'] = $this->validator;
             }
         }

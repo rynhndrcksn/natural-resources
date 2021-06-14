@@ -49,8 +49,10 @@
         </dl>
         <hr>
         <dl class="row">
-            <dt class="col-4">Other Interests:</dt>
-            <dd class="col-8"><?= esc(ucfirst($program)) ?></dd>
+            <dt class="col-4">Degree Path:</dt>
+            <dd class="col-8"><?= esc(ucfirst($degreePath)) ?></dd>
+            <dt class="col-4">Program Interests:</dt>
+            <dd class="col-8"><?= esc(ucfirst($programOptions)) ?></dd>
         </dl>
 
         <br>

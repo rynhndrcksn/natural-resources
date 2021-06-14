@@ -54,6 +54,9 @@
                     <?php if (isset($validation)) : ?>
                         <div class="text-danger"><?= $validation->getError('email') ?></div>
                     <?php endif; ?>
+                    <?php if (isset($validateEmail)) : ?>
+                        <div class="text-danger"><?= $validateEmail?></div>
+                    <?php endif; ?>
                 </div>
 
                 <!--  Student ID  -->

@@ -28,6 +28,24 @@ class LoginModel extends Model
         return isset($row);
     }
 
+    //Verify email exists
+    public function emailExists($email){
+
+        //Connect to the DB
+        $db = db_connect();
+
+        //SQL query format
+        $sql = "SELECT accountID FROM account WHERE email = :email:";
+
+        //Send query, store results
+        $results = $db->query($sql, [
+            'email'     => $email
+        ]);
+        $row = $results->getRow();
+
+        return isset($row);
+    }
+
     //Verify password matches user, then get and store the user info in the session
     public function getUser($email, $pass)
     {
@@ -49,8 +67,9 @@ class LoginModel extends Model
             'last' => $results['last'],
             'email' => $results['email'],
             'sid' => $results['sid'],
-            'program' => $results['program'],
-            'role' => $results['role']
+            'role' => $results['role'],
+            'degreePath' => $results['degreePath'],
+            'programOptions' => $results['programOptions'],
         ]);
     }
 }
