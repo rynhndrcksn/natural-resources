@@ -25,7 +25,7 @@ $('#accepted').click(function () {
 
 //Add blue background color when showing all filtered table
 $('#all').click(function () {
-    $('#all').css('background-color', 'blue')
+    $('#all').css('background-color', '#42b5adc2')
     $('#waitlisted').css('background-color', 'white')
     $('#accepted').css('background-color', 'white')
     $('#rejected').css('background-color', 'white')

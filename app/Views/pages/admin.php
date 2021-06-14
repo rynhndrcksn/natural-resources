@@ -80,7 +80,7 @@
             <div class="container-fluid form-row">
 
                 <div id="allApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div id="all" class="card bg-white shadow">
+                    <div id="all" class="card shadow">
                         <div class="card-body">
                             <h4 class="text-center">All</h4>
                             <hr>
@@ -92,7 +92,7 @@
                 </div>
 
                 <div id="acceptedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div id="accepted" class="card bg-white shadow">
+                    <div id="accepted" class="card shadow">
                         <div class="card-body">
                             <h4 class="text-center">Accepted</h4>
                             <hr>
@@ -103,9 +103,8 @@
                     </div>
                 </div>
 
-                <div id="waitlistedApplications"
-                     class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div id="waitlisted" class="card bg-white shadow">
+                <div id="waitlistedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                    <div id="waitlisted" class="card shadow">
                         <div class="card-body">
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
@@ -117,8 +116,8 @@
                 </div>
 
                 <div id="rejectedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
-                    <div class="card bg-white shadow">
-                        <div id="rejected" class="card-body">
+                    <div  id="rejected" class="card shadow">
+                        <div class="card-body">
                             <h4 class="text-center">Rejected</h4>
                             <hr>
                             <h2 class="text-center"><strong>
