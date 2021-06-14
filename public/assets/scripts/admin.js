@@ -1,3 +1,36 @@
+
+//Add red background color when showing rejected filtered table
+$('#rejected').click(function () {
+    $('#rejected').css('background-color', '#b00000ba')
+    $('#waitlisted').css('background-color', 'white')
+    $('#accepted').css('background-color', 'white')
+    $('#all').css('background-color', 'white')
+});
+
+//Add yellow background color when showing waitlisted filtered table
+$('#waitlisted').click(function () {
+    $('#waitlisted').css('background-color', '#eeb304c2')
+    $('#rejected').css('background-color', 'white')
+    $('#accepted').css('background-color', 'white')
+    $('#all').css('background-color', 'white')
+});
+
+//Add green background color when showing accepted filtered table
+$('#accepted').click(function () {
+    $('#accepted').css('background-color', '#2f8d46ed')
+    $('#waitlisted').css('background-color', 'white')
+    $('#rejected').css('background-color', 'white')
+    $('#all').css('background-color', 'white')
+});
+
+//Add blue background color when showing all filtered table
+$('#all').click(function () {
+    $('#all').css('background-color', 'blue')
+    $('#waitlisted').css('background-color', 'white')
+    $('#accepted').css('background-color', 'white')
+    $('#rejected').css('background-color', 'white')
+});
+
 document.getElementById("rejectedApplications").onclick = rejectedApplications;
 document.getElementById("waitlistedApplications").onclick = waitlistedApplications;
 document.getElementById("allApplications").onclick = allApplications;
@@ -51,3 +84,4 @@ function acceptedApplications() {
     accepted.classList.remove("d-none");
     all.classList.add("d-none");
 }
+

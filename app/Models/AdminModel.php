@@ -7,8 +7,6 @@ use CodeIgniter\Model;
 
 class AdminModel extends Model
 {
-    protected $table = 'account';
-
     function getAcceptedApplicationCount()
     {
         //Connect to the DB, build query

@@ -86,10 +86,9 @@
 
                 <!--  Program Options  -->
                 <div class="form-group mb-3 p-0 d-none" id="programOptions">
-                    <label for="programOptions">Program Options (can select multiple)</label>
+                    <label for="programOptions">Program Options (can select none or however many you want. Forestry is implied)</label>
                     <br>
                     <?php foreach ($programOptions as $programOption) : ?>
-                        <!--                            <option value="--><? //= $programOption ?><!--">--><? //= $programOption ?><!--</option>-->
                         <label><input type="checkbox" name="programOptions[]" value="<?= $programOption ?>">
                             <?= $programOption ?></label><br>
                     <?php endforeach; ?>

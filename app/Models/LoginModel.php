@@ -69,7 +69,7 @@ class LoginModel extends Model
             'sid' => $results['sid'],
             'role' => $results['role'],
             'degreePath' => $results['degreePath'],
-            'programOptions' => $results['programOptions'],
+            'programInterests' => $results['programInterests'],
         ]);
     }
 }

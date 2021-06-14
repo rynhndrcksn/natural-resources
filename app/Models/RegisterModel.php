@@ -29,7 +29,7 @@ class RegisterModel extends Model
 
         //Connect to the DB, build query
         $db = db_connect();
-        $sql = "INSERT INTO account VALUES (null, :email:, :pass:, :first:, :last:, :sid:, :degreePath:, :programOptions:, :role:)";
+        $sql = "INSERT INTO account VALUES (null, :email:, :pass:, :first:, :last:, :sid:, :degreePath:, :programInterests:, :role:)";
 
         //Send query then store the results
         $results = $db->query($sql, [
@@ -39,7 +39,7 @@ class RegisterModel extends Model
             'sid' => $newUser['sid'],
             'pass' => $newUser['pass'],
             'degreePath' => $newUser['degreePath'],
-            'programOptions' => $newUser['programOptions'],
+            'programInterests' => $newUser['programInterests'],
             'role' => $newUser['role']
         ]);
     }

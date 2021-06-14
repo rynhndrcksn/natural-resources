@@ -17,7 +17,6 @@ class Register extends BaseController
         ];
 
         $data['programOptions'] = [
-            'Forestry',
             'Wildland Fire',
             'GIS',
             'Water Quality',
@@ -94,12 +93,12 @@ class Register extends BaseController
                 //If email is not in use
                 if ($model->checkAvail($this->request->getPost('email'))) {
 
-                    //get program options
-                    $programOptions = $this->request->getPost('programOptions');
-                    if (isset($programOptions)) {
-                        $programOptions = implode(", ", $programOptions);
+                    //get program interests
+                    $programInterests = $this->request->getPost('programOptions');
+                    if (isset($programInterests)) {
+                        $programInterests = 'Forestry' . ', ' . implode(", ", $programInterests);
                     } else {
-                        $programOptions = 'Forestry';
+                        $programInterests = 'Forestry';
                     }
 
                     //Send user info to Register model to add to database
@@ -110,7 +109,7 @@ class Register extends BaseController
                         'sid' => $this->request->getPost('sid'),
                         'pass' => $this->request->getPost('pass'),
                         'degreePath' => $this->request->getPost('degreeOptions'),
-                        'programOptions' => $programOptions,
+                        'programInterests' => $programInterests,
                         'role' => 0
                     ];
 

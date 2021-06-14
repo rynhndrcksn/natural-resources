@@ -44,6 +44,7 @@
                 <ul class="list-unstyled pt-5">
 
                     <!--  Nav Items  -->
+                    <h4 class="text-light">Hello, <?= esc(ucfirst($adminName)) ?></h4><br>
                     <a href="#" class="text-decoration-none text-light">
                         <li class="nav-item">Applications</li>
                     </a>
@@ -84,7 +85,7 @@
                             <h4 class="text-center">All</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo isset($allApplicationCount) ? $allApplicationCount : 0?>
+                                    <?php echo isset($allApplicationCount) ? $allApplicationCount : 0 ?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -96,19 +97,20 @@
                             <h4 class="text-center">Accepted</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo isset($acceptedApplicationCount) ? $acceptedApplicationCount : 0?>
+                                    <?php echo isset($acceptedApplicationCount) ? $acceptedApplicationCount : 0 ?>
                                 </strong></h2>
                         </div>
                     </div>
                 </div>
 
-                <div id="waitlistedApplications" class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
+                <div id="waitlistedApplications"
+                     class="form-group col-lg-3 col-md-6 col-sm-6 order-2 order-lg-1 mx-auto">
                     <div id="waitlisted" class="card bg-white shadow">
                         <div class="card-body">
                             <h4 class="text-center">Waitlisted</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo isset($waitListedApplicationCount) ? $waitListedApplicationCount : 0?>
+                                    <?php echo isset($waitListedApplicationCount) ? $waitListedApplicationCount : 0 ?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -120,7 +122,7 @@
                             <h4 class="text-center">Rejected</h4>
                             <hr>
                             <h2 class="text-center"><strong>
-                                    <?php echo isset($rejectedApplicationCount) ? $rejectedApplicationCount : 0?>
+                                    <?php echo isset($rejectedApplicationCount) ? $rejectedApplicationCount : 0 ?>
                                 </strong></h2>
                         </div>
                     </div>
@@ -138,7 +140,8 @@
                         <td>Submission Time/Date</td>
                         <td>SID</td>
                         <td>Email</td>
-                        <td>Interests</td>
+                        <td>Degree Path</td>
+                        <td>Program Interests</td>
                         <td>Waitlist</td>
                         <td>Action</td>
                     </tr>
@@ -150,7 +153,8 @@
                             <td></td>
                             <td><?php echo $application->sid; ?></td>
                             <td><?php echo $application->email; ?></td>
-                            <td><?php echo $application->program; ?></td>
+                            <td><?php echo $application->degreePath; ?></td>
+                            <td><?php echo $application->programInterests; ?></td>
                             <td><input type="checkbox"></td>
                             <td></td>
                         </tr>
@@ -164,7 +168,8 @@
                             <td></td>
                             <td><?php echo $application->sid; ?></td>
                             <td><?php echo $application->email; ?></td>
-                            <td><?php echo $application->program; ?></td>
+                            <td><?php echo $application->degreePath; ?></td>
+                            <td><?php echo $application->programInterests; ?></td>
                             <td><input type="checkbox"></td>
                             <td></td>
                         </tr>
@@ -178,7 +183,8 @@
                             <td></td>
                             <td><?php echo $application->sid; ?></td>
                             <td><?php echo $application->email; ?></td>
-                            <td><?php echo $application->program; ?></td>
+                            <td><?php echo $application->degreePath; ?></td>
+                            <td><?php echo $application->programInterests; ?></td>
                             <td><input type="checkbox"></td>
                             <td></td>
                         </tr>
@@ -192,7 +198,8 @@
                             <td></td>
                             <td><?php echo $application->sid; ?></td>
                             <td><?php echo $application->email; ?></td>
-                            <td><?php echo $application->program; ?></td>
+                            <td><?php echo $application->degreePath; ?></td>
+                            <td><?php echo $application->programInterests; ?></td>
                             <td><input type="checkbox"></td>
                             <td></td>
                         </tr>
