@@ -39,6 +39,7 @@ $routes->match(['get', 'post'], '/reset', 'Reset::index');
 $routes->match(['get', 'post'], '/portal', 'Application::index');
 $routes->match(['get', 'post'], '/profile', 'Student::profile');
 $routes->match(['get', 'post'], '/email', 'Email::displayEmail');
+$routes->match(['get', 'post'], '/admin', 'Admin::index');
 
 /*
  * --------------------------------------------------------------------
