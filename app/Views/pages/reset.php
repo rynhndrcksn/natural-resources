@@ -18,8 +18,9 @@
 
     <!--  Row  -->
     <div class="row ">
+
         <!--  Col  -->
-        <div class="col-10 col-lg-6 col-md-8 col-sm-10 mx-auto p-0 mt-5 mb-5 rounded-lg" id="starterForm">
+        <div class="col-12 col-lg-6 col-md-8 col-sm-10 mx-auto p-0 mt-5 mb-5 rounded-lg" id="starterForm">
             <form class="w-75 mx-auto p-3 pt-5 pb-5 text-white" method="post" action="#">
 
                 <!--  Header  -->
@@ -40,13 +41,13 @@
 
                 <!--  Back to Login  -->
                 <div class="text-center pt-3">
-                    <p><a class="" href="<?php echo base_url('/') ?>">Back to Login</a></p>
+                    <p>
+                        <a class="" href="<?php echo base_url('/') ?>">Back to Login</a>
+                    </p>
                 </div>
-
             </form>
         </div>
     </div>
-
 </div><!--END OF CONTAINER-->
 
 <!--End of page specific content-->
