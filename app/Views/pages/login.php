@@ -37,11 +37,6 @@
                             <?= $validation->getError('email') ?>
                         </div>
                     <?php endif; ?>
-                    <?php if (isset($validateEmail)) : ?>
-                        <div class="text-danger">
-                            <?= $validateEmail ?>
-                        </div>
-                    <?php endif; ?>
                 </div>
 
                 <!--  Password  -->
@@ -53,10 +48,9 @@
                             <?= $validation->getError('pass') ?>
                         </div>
                     <?php endif; ?>
-                    <?php if (isset($validatePass)) : ?>
+                    <?php if (isset($errorCredentials)) : ?>
                         <div class="text-danger">
-                            <?= $validatePass ?>
-                            <a class="text-danger font-weight-bold" href="<?php echo base_url('/reset') ?>">Recover Password</a>
+                            <?= $errorCredentials ?>
                         </div>
                     <?php endif; ?>
                 </div>

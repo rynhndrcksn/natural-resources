@@ -9,13 +9,19 @@ class LoginModel extends Model
 {
     protected $table = 'account';
 
-    //Verify user exists
-    public function isUser($email, $pass){
-
+    /**
+     * This method sends a query to the database to determine if an entry exists
+     * with a matching email and password.
+     * @param $email
+     * @param $pass
+     * @return bool True if a match is found, else false
+     */
+    public function checkCredentials($email, $pass) :bool
+    {
         //Connect to the DB
         $db = db_connect();
 
-        //SQL query format
+        //Prepare query
         $sql = "SELECT accountID FROM account WHERE email = :email: AND pass = :pass:";
 
         //Send query, store results
@@ -24,6 +30,7 @@ class LoginModel extends Model
             'pass' => $pass
         ]);
         $row = $results->getRow();
+        echo "TEST";
 
         return isset($row);
     }
