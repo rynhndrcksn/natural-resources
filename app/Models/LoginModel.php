@@ -11,7 +11,8 @@ class LoginModel extends Model
 
     /**
      * This method sends a query to the database to determine if an entry exists
-     * with a matching email and password.
+     * with a matching email and password.  If the result is empty, there is no
+     * matching database entry.
      * @param $email
      * @param $pass
      * @return bool True if a match is found, else false
@@ -30,13 +31,13 @@ class LoginModel extends Model
             'pass' => $pass
         ]);
         $row = $results->getRow();
-        echo "TEST";
 
         return isset($row);
     }
 
     //Verify email exists
-    public function emailExists($email){
+    public function emailExists($email)
+    {
 
         //Connect to the DB
         $db = db_connect();

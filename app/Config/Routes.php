@@ -33,13 +33,20 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 //$routes->get('/', 'Home::index');
-$routes->match(['get', 'post'], '/', 'Login::index');
-$routes->match(['get', 'post'], '/register', 'Register::index');
-$routes->match(['get', 'post'], '/reset', 'Reset::index');
-$routes->match(['get', 'post'], '/portal', 'Application::index');
-$routes->match(['get', 'post'], '/profile', 'Student::profile');
-$routes->match(['get', 'post'], '/email', 'Email::displayEmail');
-$routes->match(['get', 'post'], '/admin', 'Admin::index');
+$routes->match(['get', 'post'], '/', 'Home::login');
+$routes->match(['get', 'post'], '/login', 'Home::login');
+$routes->match(['get', 'post'], '/reset', 'Home::reset');
+$routes->match(['get', 'post'], '/register', 'Home::register');
+
+
+
+//$routes->match(['get', 'post'], '/', 'Login::index');
+//$routes->match(['get', 'post'], '/register', 'Register::index');
+//$routes->match(['get', 'post'], '/reset', 'Reset::index');
+//$routes->match(['get', 'post'], '/portal', 'Application::index');
+//$routes->match(['get', 'post'], '/profile', 'Student::profile');
+//$routes->match(['get', 'post'], '/email', 'Email::displayEmail');
+//$routes->match(['get', 'post'], '/admin', 'Admin::index');
 
 /*
  * --------------------------------------------------------------------
