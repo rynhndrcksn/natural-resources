@@ -2,49 +2,49 @@
 
 namespace App\Controllers;
 
-use App\Models\HomeModel;
+use App\Models\UserModel;
 use CodeIgniter\Model;
 
 class Home extends BaseController
 {
     public function login()
     {
-        //TESTING !!!!!!!!!!!!!!!!!
-        echo "<p class='bg-info'>".
-            $_SERVER['REQUEST_METHOD']
 
-            ."</p>";
+        //TESTING !!!!!!!!!!!!!!!!!
+        echo "<p class='bg-info'>";
+            echo "Request Method: ".$_SERVER['REQUEST_METHOD']."<br>";
+
+        echo"</p>";
         //TESTING !!!!!!!!!!!!!!!!!
 
         $data = [];
         //Set Page Title
         $data['title'] = 'Login';
 
-
-        //Set validation rules
-        $rules = [
-            'email' => [
-                'rules' => 'required|valid_email',
-                'errors' => [
-                    'required' => 'Field required',
-                    'valid_email' => 'Invalid email address'
-                ]
-            ],
-            'pass' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Field required'
-                ]
-            ]
-        ];
-
         //If POST
         if ($this->request->getMethod() === 'post')
         {
+            //Set validation rules
+            $rules = [
+                'email' => [
+                    'rules' => 'required|valid_email',
+                    'errors' => [
+                        'required' => 'Field required',
+                        'valid_email' => 'Invalid email address'
+                    ]
+                ],
+                'pass' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => 'Field required'
+                    ]
+                ]
+            ];
+
             //Validate email and password with ruleset
             if($this->validate($rules)){
                 //Verify login credentials
-                $login = new HomeModel();
+                $login = new UserModel();
                 $email = $this->request->getPost('email');
                 $pass = $this->request->getPost('pass');
 
@@ -54,7 +54,6 @@ class Home extends BaseController
                     $userData = $login->getUser($email, $pass);
 
                     //Redirect to appropriate view
-
                 }
                 //Invalid credentials
                 else{
@@ -158,7 +157,7 @@ class Home extends BaseController
             if ($this->validate($rules)) {
 
                 //Create Register model
-                $model = new HomeModel();
+                $model = new UserModel();
 
                 //TODO: Add error from checkAvail to validation rules
                 //If email is not in use

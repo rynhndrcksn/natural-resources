@@ -2,35 +2,40 @@
 
 namespace App\Models;
 
-use App\Libraries\User;
 use CodeIgniter\Model;
 
-class HomeModel extends Model
+class UserModel extends Model
 {
     /**
-     * This method sends a query to the database to determine if an entry exists
-     * with a matching email and password.  If the result is empty, there is no
-     * matching database entry.
+     * This method will query the database for a account entry matching an email.  If a result is found,
+     * it will then compare the pass parameter with the hashed password returned by the query.
      * @param $email
      * @param $pass
      * @return bool True if a match is found, else false
      */
     public function checkCredentials($email, $pass) :bool
     {
-        //Connect to the DB
+        //Connect to the database
         $db = db_connect();
 
         //Prepare query
-        $sql = "SELECT accountID FROM account WHERE email = :email: AND pass = :pass:";
+        $sql = "SELECT * FROM account WHERE email = :email:";
 
         //Send query, store results
         $results = $db->query($sql, [
-            'email'     => $email,
-            'pass' => $pass
+            'email'     => $email
         ]);
-        $row = $results->getRow();
+        $row = $results->getResultArray()[0];
 
-        return isset($row);
+        //Verify result is not empty
+        if(is_array($row)){
+            //Verify input parameter pass === hashed password in database
+            if(password_verify($pass, $row['pass'])){
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public function getUser($email, $pass)
@@ -78,6 +83,9 @@ class HomeModel extends Model
 
         //Connect to the DB, build query
         $db = db_connect();
+
+        $newUser['pass'] = password_hash($newUser['pass'], PASSWORD_DEFAULT);
+
         $sql = "INSERT INTO account VALUES (null, :email:, :pass:, :first:, :last:, :sid:, :degreePath:, :programInterests:, :role:)";
 
         //Send query then store the results
