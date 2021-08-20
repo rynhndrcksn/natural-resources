@@ -22,7 +22,6 @@ class Home extends BaseController
 
 
         //Set validation rules
-        helper(['form']);
         $rules = [
             'email' => [
                 'rules' => 'required|valid_email',
@@ -96,7 +95,6 @@ class Home extends BaseController
             'Park Management'
         ];
 
-        helper(['form']);
         $rules = [
             'degreeOptions' => [
                 'rules' => 'required|in_list[Natural Resources Forestry A.A.S., Natural Resources A-PP (for transfer students)]',

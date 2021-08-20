@@ -49,5 +49,9 @@ class BaseController extends Controller
         //Create a session item
         $this->session = \Config\Services::session();
         $this->session->start();
+
+        //Load form helper to provide contains functions that assist in working with forms.  Particularly allows access
+        //to POST data directly from view
+        helper('form');
 	}
 }
