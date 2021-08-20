@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 
+use App\Models\HomeModel;
+use CodeIgniter\Model;
+
 class Home extends BaseController
 {
     public function login()
@@ -34,7 +37,7 @@ class Home extends BaseController
             //Validate email and password with ruleset
             if($this->validate($rules)){
                 //Verify login credentials
-                $login = new LoginModel();
+                $login = new HomeModel();
                 $email = $this->request->getPost('email');
                 $pass = $this->request->getPost('pass');
 
@@ -142,7 +145,7 @@ class Home extends BaseController
             if ($this->validate($rules)) {
 
                 //Create Register model
-                $model = new RegisterModel();
+                $model = new HomeModel();
 
                 //TODO: Add error from checkAvail to validation rules
                 //If email is not in use
@@ -189,7 +192,7 @@ class Home extends BaseController
     public function reset()
     {
         $data = [];
-        $data['title'] = 'Create Account';
+        $data['title'] = 'Reset Password';
 
         return view('pages/reset.php', $data);
     }

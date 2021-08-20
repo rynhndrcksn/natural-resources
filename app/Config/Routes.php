@@ -38,8 +38,6 @@ $routes->match(['get', 'post'], '/login', 'Home::login');
 $routes->match(['get', 'post'], '/reset', 'Home::reset');
 $routes->match(['get', 'post'], '/register', 'Home::register');
 
-
-
 //$routes->match(['get', 'post'], '/', 'Login::index');
 //$routes->match(['get', 'post'], '/register', 'Register::index');
 //$routes->match(['get', 'post'], '/reset', 'Reset::index');
