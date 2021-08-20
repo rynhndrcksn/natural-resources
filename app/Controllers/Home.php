@@ -9,9 +9,17 @@ class Home extends BaseController
 {
     public function login()
     {
+        //TESTING !!!!!!!!!!!!!!!!!
+        echo "<p class='bg-info'>".
+            $_SERVER['REQUEST_METHOD']
+
+            ."</p>";
+        //TESTING !!!!!!!!!!!!!!!!!
+
         $data = [];
         //Set Page Title
         $data['title'] = 'Login';
+
 
         //Set validation rules
         helper(['form']);
@@ -19,14 +27,14 @@ class Home extends BaseController
             'email' => [
                 'rules' => 'required|valid_email',
                 'errors' => [
-                    'required' => 'Email address required',
-                    'valid_email' => 'Please enter a valid email address'
+                    'required' => 'Field required',
+                    'valid_email' => 'Invalid email address'
                 ]
             ],
             'pass' => [
                 'rules' => 'required',
                 'errors' => [
-                    'required' => 'Please enter your password'
+                    'required' => 'Field required'
                 ]
             ]
         ];
@@ -51,7 +59,7 @@ class Home extends BaseController
                 }
                 //Invalid credentials
                 else{
-                    $data['errorCredentials'] = "The email and/or password you entered are incorrect, please try again.";
+                    $data['errorCredentials'] = "Invalid email or password";
                 }
             }
             //Email and/or password are not valid
@@ -66,6 +74,13 @@ class Home extends BaseController
 
     public function register()
     {
+        //TESTING !!!!!!!!!!!!!!!!!
+        echo "<p class='bg-info'>".
+            $_SERVER['REQUEST_METHOD']
+
+            ."</p>";
+        //TESTING !!!!!!!!!!!!!!!!!
+
         $data = [];
         $data['title'] = 'Create Account';
 
@@ -191,6 +206,13 @@ class Home extends BaseController
 
     public function reset()
     {
+        //TESTING !!!!!!!!!!!!!!!!!
+        echo "<p class='bg-info'>".
+            $_SERVER['REQUEST_METHOD']
+
+            ."</p>";
+        //TESTING !!!!!!!!!!!!!!!!!
+
         $data = [];
         $data['title'] = 'Reset Password';
 

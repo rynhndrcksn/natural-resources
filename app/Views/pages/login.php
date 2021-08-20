@@ -21,21 +21,21 @@
 
         <!--  Col  -->
         <div class="col-12 col-lg-6 col-md-8 col-sm-10 mx-auto p-0 mt-5 mb-5 rounded-lg" id="starterForm">
-            <form class="w-75 mx-auto pt-5 pb-5 text-white" method="post" action="#">
+            <form class="w-75 mx-auto pt-5 pb-5 text-white" method="post" action="<?php echo base_url('/login') ?>">
 
                 <!--  Header  -->
                 <h2 class="text-center">Natural Resources</h2>
                 <h6 class="text-center">Application Management Portal</h6>
                 <h6 class="text-center pt-4 pb-2">Welcome! Please Log In</h6>
 
-                <!--  Username  -->
+                <!--  Email  -->
                 <div class="form-group">
                     <label for="user">Email</label>
                     <input type="text" class="form-control" id="user" name="email" value="<?= set_value('email') ?>">
-                    <?php if (isset($validation)) : ?>
-                        <div class="text-danger">
-                            <?= $validation->getError('email') ?>
-                        </div>
+
+                    <!--  Email Error  -->
+                    <?php if(isset($validation)) :?>
+                    <p class="text-danger pb-0"><?= $validation->getError('email') ?></p>
                     <?php endif; ?>
                 </div>
 
@@ -43,18 +43,14 @@
                 <div class="form-group">
                     <label for="pass">Password</label>
                     <input type="password" class="form-control" id="pass" name="pass">
-                    <?php if (isset($validation)) : ?>
-                        <div class="text-danger">
-                            <?= $validation->getError('pass') ?>
-                        </div>
-                    <?php endif; ?>
-                    <?php if (isset($errorCredentials)) : ?>
-                        <div class="text-danger">
-                            <?= $errorCredentials ?>
-                        </div>
-                    <?php endif; ?>
+
+                    <!--  Password Error  -->
+                    <?php if(isset($validation)) :?>
+                    <p class="text-danger pb-0"><?= $validation->getError('pass') ?></p>
+                    <?php elseif (isset($errorCredentials)) :?>
+                    <p class="text-danger pb-0"><?= $errorCredentials?></p>
+                    <?php endif;?>
                 </div>
-                <br>
 
                 <!--  Submit Button  -->
                 <div class="text-center">
