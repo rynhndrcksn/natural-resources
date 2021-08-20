@@ -30,9 +30,7 @@ class UserModel extends Model
         //Verify result is not empty
         if(is_array($row)){
             //Verify input parameter pass === hashed password in database
-            if(password_verify($pass, $row['pass'])){
-                return true;
-            }
+            return password_verify($pass, $row['pass']);
         }
 
         return false;
